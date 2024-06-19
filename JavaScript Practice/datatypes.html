@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datatypes</title>
+</head>
+<body>
+    <script>
+        /*
+        Data types -  used to know variable stored data is belongs to which type
+        mainly two types of data 
+        1.primitive data type      -also known as primary data type
+                                    store only single values we cant store multiple values
+                                    these are 5 types
+                                    1.number    - not only positive numbers and also decimal numbers, negative numbers also
+                                    2.string    - combination of character not only alphabets and also digits also 
+                                                  mandatory to keep values in single or double quotes
+                                    3.boolean   - it has only two values 
+                                                  1.true  - valide
+                                                  2.false - not valide
+                                    4.undefined - it occurs when there is no value
+                                    5.null      - it means nothing, no value inside the varibale name and if u check the data type means it gives object 
+                                                  because null means there is nothing then we can store any data type values
+        2.non-primitive data type  -also know as non primary data types
+                                    store multiple values
+                                    these are 3 types
+                                    1.array           - we can store multiple values of different data types not only same data types
+                                                        accessed by using index , and index start from zero and total length of array is n-1
+                                                        syntax for accesed first value in array :arr[0]
+                                    2.object          - we can store values as key:value pairs
+                                                        accessed by using key, 
+                                                        syntax for accessed for first value in object :obj.key
+                                    3.arrays of object- combination os both arrays and objects
+                                                        there are no of objects inside the array
+                                                        arr[0].key
+        */
+
+        //primary data types
+        //number
+        let a = 10; 
+        console.log(a);
+        console.log(typeof a);    //typeof keyword is used to know the data type of object
+
+        //string
+        let name="Sampu";
+        console.log(name);
+        console.log(typeof name);
+
+        //boolean
+        let validation=true  //if u use '' "" means comes under string so dont use for boolean
+        console.log(validation);
+        console.log(typeof validation);
+
+        //undefined
+        let b;
+        console.log(b);  //undefined   because we didnt intialize any value
+
+        //null
+        let x=null; //dont use any '' "" null means nothing
+        console.log(x); null;
+        console.log(typeof x);  //it gives output as undefined because nothing means we can store value of any data type
+
+
+        //non primary data types
+        //array
+        let arr=[10,20,30,"Sampu",true];  //data seperated with comma ,
+        console.log(arr);   //acess entire array
+        console.log( typeof arr);  
+        console.log(arr[0]);  //accessed first value in array
+
+        //object
+        let obj={no:1, name:'sampu', age:21};
+        console.log(obj);    //acces entire object
+        console.log(typeof obj);
+        console.log(obj.name);
+
+        //arrays of bjects
+        let array_of_object=[
+            data1={no:1, name:'sampu', age:21},
+            data2={no:2, name:'balu', age:22},
+            data3={no:3, name:'sandhya', age:22},
+        ]
+        console.log(array_of_object);  //acces entire array of objects
+        console.log(typeof array_of_object);
+        console.log(array_of_object[0].name);  //accessed first object's name value
+        console.log(array_of_object[2].age);    //accessed third object's age value
+    </script>
+
+    
+</body>
+</html>

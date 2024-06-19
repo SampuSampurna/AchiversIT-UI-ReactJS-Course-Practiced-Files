@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <script>
+        /* 
+        operators are very useful in js programming language
+        they are used to perform operations on variables and values
+        maily we have to focus on two terms 
+        1.operands - values
+        2.operators - symbols
+        operators are 7 types
+        1.Arithmetic Operators  + - * 
+                                / (it gives quotent) 
+                                % (it gives remainder)
+        2.Unary Operators       ++ --
+                                ++ Increment in this two types 
+                                1.pre-increment(++a) 
+                                2.post-increment(a++)
+                                -- decrement two types
+                                1.pre-decrement(--a)
+                                2.post-decrement(a--)
+        3.Relational/Comparision operators == === < > <= >= !=  it gives output in the form of only boolean values
+                                           == check only value
+                                           === check value along with data type also 
+        4.Assignment operators  = += -= *= /= %=
+                                first it do operation and output will store in that variable only
+        
+       
+        5.Ternary/Conditional operators - why these are also known as ternary means there are three operand we are used
+                                          why these are also known as conditional means there is a condition also
+                                          (condition)?(Expression1):(Expression2)
+
+        6.logical operators  - && logical and
+                                c1  c2  R
+                                T   T   T
+                                T   F   F
+                                F   T   F
+                                F   F   F
+                               || logical or
+                               c1  c2  R
+                               T   T   T
+                               T   F   T
+                               F   T   T
+                               F   F   F
+                               ! logical not
+                                c1  R
+                                T   F
+                                F   T
+        7.Bitwise operators  - mostly u used this is for conversion of noraml data into encrypted data
+                               if u want to encrypt any data then we can use this method because in this method data is conveted into binary
+                               then binary data human can't understand only machine can understand
+                               for example whatsapp no otherparties can be see ur msgs
+                                first u want to learn about decimal to binary conversion
+                                
+                                & bitwise and
+                               | bitwise or
+                               ^ bitwise xor
+                               ~ bitwise not
+
+        */
+
+        //arithmetic operators
+        let a = 10;
+        let b = 20;
+        console.log(a+b); 
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log(a%b);
+
+        //Unary Operators
+        let c = 10;
+        console.log(c++); //10
+        console.log(c); //11
+        console.log(++c); //12
+        console.log(c--); //12
+        console.log(c); //11
+        console.log(--c); //10
+
+        //relational/comparision operators
+        let x=10;
+        let y="10";
+        console.log(x+y); //1010 if u want to add number with string then + is acts like concatination
+        console.log(x==y); //true
+        console.log(x===y); //false  because it check datatype also 
+        
+        // Assignment operators
+        let z=10;
+        z+=20; //30  it can be calculated by z=z+10
+        z-=20;
+        z*=20;
+        z/=20;
+        z%=20;
+
+        //ternary/conditional operators
+        let age=20;
+        let result = (age>18) ? "you are eligible for vote" : "you are not eligible for vote";
+        console.log(result);
+
+        //logical operators
+        let a1=true;
+        let a2=false;
+        console.log(a1&&a2); //false
+        console.log(a1||a2); //true
+        console.log(!a1); //false
+
+        //bitwise operators
+        //in this first decinal numbers are converted into binary numbers and then apply corresponding symbol truthtable for result and then that will be converted again into decimal result as final result 
+        let p=10; //1010               
+        let q=12; //1100
+        console.log(p&q); //8   - 0000
+        console.log(p|q); //14  - 1110
+        console.log(p^q); //6   - 1110
+        console.log(~(-4));//3  - 0011
+
+    </script>
+</body>
+</html>
