@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Types</title>
+</head>
+<body>
+    <form method="post" action="#">
+        <h1>Types of Input Forms</h1>
+        <input type="text" name="name" placeholder="Enter your name" minlength="8" maxlength="15" required><br><br>
+        <input type="email" name="email" placeholder="Enter your Email"><br><br>
+        <input type="password" name="password" placeholder="Password"><br><br>
+        <input type="url" name="website" placeholder="Enter your website URL"><br><br>
+        <input type="number" name="number" placeholder="Enter a number"><br><br>
+        <input type="tel" name="tel" placeholder="Enter your phone number" min="9" max="15" required><br><br>
+        <input type="search" name="search" placeholder="You can search here anything..........."><br><br>
+        <input type="range" name="range" min="0" max="100"><br><br>
+        <input type="color" name="color"><br><br>
+        <input type="file" name="file"><br><br>
+        <input type="date" name="date"><br><br>
+        <input type="time" name="time"><br><br>
+        <input type="datetime-local" name="datetime-local"><br><br>
+
+        <label for="prices">Select your price range:</label><br>
+        <input type="checkbox" name="prices" value="1000-2000" id="1000-2000">
+        <label for="1000-2000">1000-2000</label><br>
+        <input type="checkbox" name="prices" value="2000-3000" id="2000-3000">
+        <label for="2000-3000">2000-3000</label><br><br><br>
+
+        <label for="gender">select your gender:</label><br>
+        <label for="female">Female</label>
+        <input type="radio" value="female" id="female" name="gender">
+        <label for="male">Male</label>
+        <input type="radio" value="male" id="male" name="gender">
+        <label for="custom">Custom</label><br><br>
+
+        <select name="dropdown" id="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select><br><br>
+
+        <textarea name="textarea" rows="4" cols="50" placeholder="Enter your message"></textarea><br><br>
+
+        <input type="hidden" name="hidden">
+        <input type="reset" value="Reset">
+        <input type="button" value="Button" onclick="alert('Button clicked!')">
+        <input type="submit" value="Submit">
+        <!-- <input type="image" src="C:\Users\SAMPURNA\Downloads\IMG-20230924-WA0106.jpg" alt="Submit" width="10%" height="8%"> -->
+    </form>    
+</body>
+</html>

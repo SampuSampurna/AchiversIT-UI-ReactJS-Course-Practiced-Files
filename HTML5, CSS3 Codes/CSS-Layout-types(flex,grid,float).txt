@@ -1,0 +1,188 @@
+
+1.FLEX-BOX: It is used for one dimensional 
+two main term 
+             1.flex-container 
+             2.flex-items
+ 1.flex-container properties
+  1.flex-direction : By default its values is row
+                      column, column-reverse, row-reverse
+  2.flex-wrap : wrap, nowrap, wrap-reverse, row wrap
+  3.flex-flow : shorthand for flex-direction and flex-wrap
+  4.justify-content
+  5.align-items
+  6.align-content
+
+ 2.flex-item properties
+   1.order
+   2.flex-grow
+   3.flex-shrink
+   4.flex-basis
+   5.flex
+   6.align-self
+
+2.GRID-BOX: It is used for multi dimensional
+ two main term
+           1.grid-container
+           2.grid-item
+1.grid-container
+   1.grid-template-row
+   2.grid-template-column
+   3.justify-content
+   4.align-content
+
+2.grid-item
+  1.grid-column
+  2.grid-row
+  3.grid-area
+  4.grid-row-start
+  5.grid-column-start
+  6.grid-row-end
+  7.grid-column-end
+  8.grid-template-areas
+
+3.FLOAT : left,right,none,inherit
+
+4.MediaQueries: 
+  syntax: @media only screen and (min-width:245px) and (max-width:425px)
+
+
+
+
+
+Flexbox
+Flexbox is a one-dimensional layout model used for arranging items in a container either in a row or a column.
+
+Flex-Container Properties
+flex-direction: Defines the direction of the main axis.
+
+row: Default value. Items are placed from left to right.
+row-reverse: Items are placed from right to left.
+column: Items are placed from top to bottom.
+column-reverse: Items are placed from bottom to top.
+flex-wrap: Controls whether the flex items should wrap or not.
+
+nowrap: Default value. All items will be on one line.
+wrap: Items will wrap onto multiple lines from top to bottom.
+wrap-reverse: Items will wrap onto multiple lines from bottom to top.
+flex-flow: Shorthand for flex-direction and flex-wrap.
+
+Example: flex-flow: row wrap;
+justify-content: Aligns items along the main axis.
+
+flex-start: Items are packed toward the start of the main axis.
+flex-end: Items are packed toward the end of the main axis.
+center: Items are centered along the main axis.
+space-between: Items are evenly distributed; the first item is at the start and the last item is at the end.
+space-around: Items are evenly distributed with equal space around them.
+space-evenly: Items are distributed so that the space between any two items (and the space to the edges) is equal.
+align-items: Aligns items along the cross axis.
+
+stretch: Default value. Items are stretched to fill the container.
+flex-start: Items are aligned toward the start of the cross axis.
+flex-end: Items are aligned toward the end of the cross axis.
+center: Items are centered along the cross axis.
+baseline: Items are aligned such that their baselines align.
+align-content: Aligns the lines of items within the flex container when there is extra space in the cross-axis.
+
+stretch: Default value. Lines are stretched to take up the remaining space.
+flex-start: Lines are packed toward the start of the container.
+flex-end: Lines are packed toward the end of the container.
+center: Lines are centered in the container.
+space-between: Lines are evenly distributed; the first line is at the start and the last line is at the end.
+space-around: Lines are evenly distributed with equal space around them.
+space-evenly: Lines are distributed so that the space between any two lines (and the space to the edges) is equal.
+Flex-Item Properties
+order: Controls the order in which items appear in the flex container.
+
+Example: order: 2; (Default is 0. A higher number means the item will appear later in the order.)
+flex-grow: Defines the ability for an item to grow if necessary.
+
+Example: flex-grow: 1; (Default is 0. A higher number means the item will take up more space.)
+flex-shrink: Defines the ability for an item to shrink if necessary.
+
+Example: flex-shrink: 1; (Default is 1. A higher number means the item will shrink more.)
+flex-basis: Defines the initial size of the item before it grows or shrinks.
+
+Example: flex-basis: 100px; (Default is auto.)
+flex: Shorthand for flex-grow, flex-shrink, and flex-basis.
+
+Example: flex: 1 0 100px; (Equivalent to flex-grow: 1; flex-shrink: 0; flex-basis: 100px;)
+align-self: Allows the default alignment to be overridden for individual flex items.
+
+Example: align-self: center; (Possible values: auto, flex-start, flex-end, center, baseline, stretch.)
+Grid
+Grid is a two-dimensional layout system, meaning it can handle both rows and columns simultaneously.
+
+Grid-Container Properties
+grid-template-rows: Defines the number and size of rows in a grid layout.
+
+Example: grid-template-rows: 100px 200px; (Creates two rows, first row 100px and second row 200px.)
+grid-template-columns: Defines the number and size of columns in a grid layout.
+
+Example: grid-template-columns: 100px 200px; (Creates two columns, first column 100px and second column 200px.)
+justify-content: Aligns the grid container's content horizontally.
+
+Values: start, end, center, stretch, space-between, space-around, space-evenly.
+align-content: Aligns the grid container's content vertically.
+
+Values: start, end, center, stretch, space-between, space-around, space-evenly.
+Grid-Item Properties
+grid-column: Shorthand for grid-column-start and grid-column-end.
+
+Example: grid-column: 1 / 3; (The item will span from column line 1 to column line 3.)
+grid-row: Shorthand for grid-row-start and grid-row-end.
+
+Example: grid-row: 1 / 3; (The item will span from row line 1 to row line 3.)
+grid-area: Shorthand for grid-row-start, grid-column-start, grid-row-end, and grid-column-end.
+
+Example: grid-area: 1 / 1 / 3 / 3; (The item will span from row 1 to 3 and column 1 to 3.)
+grid-row-start: Specifies the starting row line for a grid item.
+
+Example: grid-row-start: 1;
+grid-column-start: Specifies the starting column line for a grid item.
+
+Example: grid-column-start: 1;
+grid-row-end: Specifies the ending row line for a grid item.
+
+Example: grid-row-end: 3;
+grid-column-end: Specifies the ending column line for a grid item.
+
+Example: grid-column-end: 3;
+grid-template-areas: Defines named grid areas.
+
+Example:
+css
+Copy code
+grid-template-areas:
+  "header header header"
+  "main main sidebar"
+  "footer footer footer";
+Float
+The float property is used for positioning and formatting content e.g., letting an image float to the left of text in a container.
+
+left: The element floats to the left of its container.
+right: The element floats to the right of its container.
+none: Default value. The element does not float.
+inherit: The element inherits the float value from its parent.
+Media Queries
+Media Queries are used to apply different styles for different devices or screen sizes.
+
+syntax: @media only screen and (min-width: 245px) and (max-width: 425px)
+@media: The rule starts with @media.
+only screen: Applies the styles only on screens.
+and: Used to combine multiple conditions.
+(min-width: 245px): Applies the styles if the viewport width is at least 245 pixels.
+(max-width: 425px): Applies the styles if the viewport width is no more than 425 pixels.
+By using Media Queries, you can create responsive web designs that adjust to different screen sizes and device orientations.
+
+
+
+
+
+
+
+
+
+
+
+

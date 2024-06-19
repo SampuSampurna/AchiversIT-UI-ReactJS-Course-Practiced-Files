@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform-Trnsition-Animation</title>
+    <style>
+        section,div{
+            border: 1px solid salmon;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        section div:first-child{
+            transform: translate(100px, 200px); /* translate used for moving an element form intial to required position like x z axis*/
+        }
+        section div:nth-child(2){
+            transform: rotate(4deg);  /* rotate used for rotate an element only*/
+        } 
+        section div:nth-child(3){
+            transform: skew(15deg);   /* skew used for rotate an element and also content also*/
+        }
+        section div:last-child{
+            margin-left: 45px;
+            transform: scale(1.1);  /* scale increases the zoom level of the element */
+            transition-property: height, background-color, border;
+            transition-duration: 3s;
+            transition-timing-function:linear;
+            transition-delay: 0s;
+           
+        }
+        section div:last-child:hover{
+        height: 300px;
+        background-color: rgb(228, 151, 18);
+        border:10px solid orangered;
+        }
+       @keyframes images{
+        from {
+            left: 0%;
+            background-color: rgb(41, 221, 41);
+            
+        }
+        to {
+            left: 100%;
+            background-color: chocolate;
+            
+        }
+       }
+        img{
+            position: relative;
+            animation-name: images;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JS</div>
+        <div>JAVA</div>
+
+    </section>
+    <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" alt="setting-image" height="50px" width="50px">
+    
+</body>
+</html>

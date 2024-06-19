@@ -1,0 +1,31 @@
+Selectors in CSS
+
+1) Global/universal selctors (*)
+2) Tag/Element
+3) Class (.)
+4) Id (#)
+5) Attribute
+   5.1) has attribute [attr]
+   5.2) Attribute values equals to [attr="value"]
+   5.3) Attribute value starts with [attr^="value"]
+   5.4) Attribute value ends with [attr$="value"]
+   5.5) Attribute value contains with [attr*="value"]
+6) Relationship
+   6.1) parent-child
+        6.1.1) Direct children (selector > selector)
+        6.1.2) Decendant children (selector selector)
+   6.2) Siblings
+        6.2.1) General sibleng (selector ~ selector)
+        6.2.2) Adjacent sibling (selector + selector)
+7) State of element
+   7.1) Psuedo Selectors
+        7.1.1)Psuedo Class (selector : <state of element>)
+               forms
+                 :focus
+                 :submit
+        7.1.2)Psuedo Element (selector :: Portion of element)
+               ::before
+               ::after
+               ::selection
+8) Group (selector, selector, selector, selector.....)
+9) Combinators (selector selector selector selector)

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunion form for idividuals</title>
+</head>
+<body>
+    <form>
+        <h1>Reunion Form</h1>
+        <p>Time to rekindle some good of memories! See you soon!</p>
+        <hr>
+        <p>Date: 25-05-2024 | Time: 6pm onwards | Address: Our garage</p>
+        <label for="liketojoinus">Would you like to join us?</label><br>
+        <input type="radio" name="liketojoinus" id="yes" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" name="liketojoinus" id="no" value="no">
+        <label for="no">No</label><br><br>
+        <label>Name</label><br>
+        <input type="text" name="name" placeholder="enter your name" required><br><br>
+        <label>Phone</label><br>
+        <input type="tel" name="numver" placeholder="enter your phone number" required><br><br>
+        <label for="meals">Your Meal Prefarence</label><br>
+        <input type="radio" name="meals" id="veg" name="veg">
+        <label for="veg">Vegeterian</label>
+        <input type="radio" name="meals" id="nonveg" name="nonveg">
+        <label for="nonveg">Non-Vegeterian</label><br><br>
+        <label for="games">What kind of games are you intrested in?</label><br>
+        <input type="checkbox" value="indoor" id="indoor" name="games">
+        <label for="indoor">Indoor</label>
+        <input type="checkbox" value="board" id="board" name="games">
+        <label for="board">Board</label>
+        <input type="checkbox" value="ballgames" id="ballgames" name="games">
+        <label for="ballgames">Ball games</label>
+        <input type="checkbox" value="outdoor" id="outdoor" name="games">
+        <label for="outdoor">Outdoor</label>
+        <input type="checkbox" value="watergames" id="watergames" name="games">
+        <label for="watergames">Water Games</label><br><br>
+        <label>Do you any questions?</label><br>
+        <input type="text" name="questions" placeholder="You can ask questions.."><br><br>
+        <label>Would you like suggest anything?</label><br>
+        <textarea name="textarea" rows="3" cols="40" placeholder="Your Suggestions"></textarea><br><br>
+        <input type="reset" value="reset">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

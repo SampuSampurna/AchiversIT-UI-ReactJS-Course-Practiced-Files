@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        .grid-box{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 3px;
+            
+        }
+        .float-box div{
+            display: inline-block;
+            width: 32.6%;
+            margin-bottom: 2px;
+        }
+        
+        .flex-box{
+            
+            display: none
+            
+        }
+        section, div{
+            border: 1px solid black;
+            padding: 3px;
+        }
+        @media only screen and (min-width: 320px) and (max-width: 426px) {
+            .grid-box{
+            
+            grid-template-columns: repeat(1,1fr);
+           
+            
+        }
+        .float-box div{
+            
+           width:98%
+        }
+        }
+    </style>
+</head>
+<body>
+    <h2>this is example for grid box</h2>
+    <section class="grid-box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+
+    </section>
+    <h2>this is example for float box</h2>
+    <section class="float-box">
+        
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+
+    </section>
+    <!-- <h2>this is example for flex box</h2> -->
+    <section class="flex-box">
+        
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <br />
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <br />
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+
+    </section> 
+    
+
+</body>
+</html>

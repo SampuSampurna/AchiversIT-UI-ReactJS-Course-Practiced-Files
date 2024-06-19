@@ -1,0 +1,13 @@
+body,html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+    height: 100%;
+}
+header, main, footer{
+    border: 2px solid red;;
+}

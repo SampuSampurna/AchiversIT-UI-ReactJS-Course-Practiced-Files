@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Selectors-universal-class-id-tag</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .headings{
+            margin: 1px;
+            padding: 2px;
+            color: cornflowerblue;
+            
+        }
+        #title{
+            text-decoration:underline;
+            color: cadetblue;
+            margin: 5px 0;
+            text-align: center;
+        }
+        #whyAIT{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+        }
+        #expert-tainer{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #fee-structure{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #good-management{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #friendly{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #placements{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #experts{
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        #weather{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        #better-life{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p{
+            margin-top: 7px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        ul{
+            display: block;
+            list-style: none;
+        }
+        li{
+            color:rgb(197, 80, 255);
+            font-style: italic;
+        }
+        div{
+            border: 1px solid black;
+        }
+        section{
+            margin: 5px;
+            border: 1px double red;
+            
+        }
+        body{
+            padding: 2%;
+        }
+        table{
+            border: 3px double blue;
+            margin-left: 5px;
+
+            
+        }
+        th{
+            border: 1px solid blue;
+            font-style: bold;
+        }
+        td{
+            border: 1px solid blue;
+            font-style: italic;
+        }
+        a{
+            margin-left: 46%;
+            color: darkorange;
+            margin-bottom: 2px;
+        }
+        img{
+            float: right;
+        }
+        table, th, td{
+            border-collapse: collapse;
+        }
+        
+               
+    </style>
+</head>
+
+<body>
+    <img src="https://www.achieversit.com/assets/images/logo-white.png"alt="img-of-achieversIT" width="100px" height="100px">
+    <div>
+    <!--Selectors in css - universal/global(*), class(.), id(#), tagname
+        * is known as universal or global selector and it is used for mainly To reset the browser default setting
+        .classname is known as class selector and it is used for multiple times to style th html elements
+        #idname is known as id selector and it is used for only once unique
+        tagname is known as tag/element selector and it is used for specific elements only
+        If in case u given class and id selectors both for one elemenet then first preferance is id and class properties are overwritten 
+        -->
+    
+    <h1 id="title">Welcome to AchieversIT Solutions</h1>
+    <h2 class="headings">Welcome to AchieversIT Solutions</h2>
+    <h2 class="headings">Welcome to AchieversIT Solutions</h2>
+    <h3 class="headings">Welcome to AchieversIT Solutions</h3>
+    <h3 class="headings">Welcome to AchieversIT Solutions</h3>
+    <h4 class="headings">Welcome to AchieversIT Solutions</h4>
+    <h4 class="headings">Welcome to AchieversIT Solutions</h4>
+    <h5 class="headings">Welcome to AchieversIT Solutions</h5>
+    <h5 class="headings">Welcome to AchieversIT Solutions</h5>
+    <h6 class="headings">Welcome to AchieversIT Solutions</h6>
+    <h6 class="headings">Welcome to AchieversIT Solutions</h6>
+
+    <p>Welcome to AchieversIT Solutions........
+    </p>
+    <p>one of the best training institute for software training and in this achievers institute 100% placement assistant is there.</p>
+    <h2 id="whyAIT">Why do we choose achieverIt?</h2>
+    <section>
+    <ul>
+        <li id="expert-tainer">Expert Trainer</li>
+        <li id="fee-structure">Fee Structure</li>
+        <li id="good-management">Good management</li>
+        <li id="friendly">Friendly</li>
+        <li id="placements">Placements</li>
+        <li id="experts">Experts</li>
+        <li id="weather">Weather</li>
+        <li id="better-life">Better life</li>
+        
+    </ul>
+    </section>
+    <table>
+        <tr>
+            <th>SNO.</th>
+            <th>SNAME</th>
+            <th>COURSES</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>sampu</td>
+            <td>UI</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>kavya</td>
+            <td>UI</td>
+        </tr>
+        
+    </table>
+    <a href="#">Know More</a>
+    
+    </div>
+</body>
+</html>

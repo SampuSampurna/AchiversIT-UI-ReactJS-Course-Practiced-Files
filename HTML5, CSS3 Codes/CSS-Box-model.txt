@@ -1,0 +1,71 @@
+Box-model:
+
+1.content - it means content and it is measured in terms of height and width(height & width are known as Dimensions)
+2.padding - it is the space within/inside content
+3.border  - it is the border for the content
+4.margin  - it is space around/outside the content
+
+Total Width = leftMargin + leftBorder + leftPadding + actualWidth + rightPadding + rightBorder + rightMargin
+Total Height = topMargin + TopBorder + TopPadding + actualHeight + bottomPadding + bottomBorder + bottomMargin
+
+Content: There are two types 1.width 2.height
+          Width : 1.Min-widht  2.Max-width
+          Height: 1.Min-height 2.Max-height
+(TotalProperties: 6)
+
+Padding: There are four types
+         1.padding-top
+         2.padding-right
+         3.padding-bottom
+         4.padding-left
+padding:10px (for all sides it is 10px only)
+padding:10px 20px (10px for top&bottom 20px for left&right)
+padding:10px 20px 30px(10px for top 20px for left&right 30px for bottom)
+padding:10px 20px 30px 40px(10px top, 20px right, 30px bottom, 40px left)
+
+border: there are four types
+         1.border-top
+         2.border-right
+         3.border-bottom
+         4.border-left
+         5.border-radius
+         6.border-width
+         7.border-style
+         8.border-color
+( first 4 are same as padding)
+border-radius:it is used for smothing/rounded shape
+border:we can use two more in this 
+               1.width
+               2.style
+               3.color (it is optional & bydefault it takes black)
+               ex: border:1px solid;(in this case it takes black color)
+                   border:1px solid blue;
+
+margin: there are four types
+         1.margin-top
+         2.margin-right
+         3.margin-bottom
+         4.margin-left
+(same as padding)
+
+for images backgrounf-images:
+1.background-image: url("") (we can place any url in betweend may be double/single quotations in ())
+2.background-attachment: scroll 
+                         fixed
+3.background-position: top,right,bottom,left can place an image
+                       background-position-x: horizontally it places an image 
+                       background-position-y: vertically it places an image
+4.background-repeat: repeat - it repeat the background images
+                     no-repeat - it display an image only once
+5.background-size: cover(it is used image size is smaller than box)
+                   contain(it is used image size is bigger than box)
+6.background-clip: border-box
+                   padding-box
+                   content-box
+7.background-origin: border-box
+                     padding-box
+                     content-box
+                         
+
+
+          

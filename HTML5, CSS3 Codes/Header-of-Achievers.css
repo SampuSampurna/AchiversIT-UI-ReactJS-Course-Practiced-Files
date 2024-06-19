@@ -1,0 +1,24 @@
+body{
+    margin:0;
+}
+.mainheader{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background-color: #343a40;
+    margin: 0;
+    padding: 0 40px;
+}
+.mainheader img{
+    height:55px;
+}
+.linksinheader{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    list-style: none;
+    margin-top: 30px;
+    
+}
+.listnames{
+    color: white;
+    text-decoration: none;
+}

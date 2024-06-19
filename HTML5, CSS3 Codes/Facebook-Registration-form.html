@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facebook Registration Form</title>
+</head>
+<body>
+    <section>
+        <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook logo" width="15%" height="8%" />
+        <!--alt is the alternate text for the image and we can use width and height like the above in img tag itself-->
+        <section>
+            <h1>Create a new account</h1>
+            <p>It's quick and easy.</p>
+            <hr>
+            <form action="#" method="post" novalidate><!--novalidate bypasses the required-->
+                <!-- action is used to get the details of user entered through any url and placing that url in '#'
+                in method two types get(default)it takes the details through in this page url only in case there is sensitive data like password user anyone can see
+                post this is the solution for the limitation in get method -->
+                <br>
+                <input type="text" name="firstname" placeholder="First name" required><!--required is mandatory without filling this input we cant submit ths form-->
+                <input type="text" name="surname" placeholder="Surname" required><br><br>
+                <input type="text" name="mobilenumber_or_email" placeholder="Mobile number or email address" required><br><br>
+                <input type="password" name="password" placeholder="New password" required><br><br>
+                
+                <label for="date-of-birth">Date of birth</label><br>
+                <select name="day-of-birth" id="day-of-birth">
+                    <option value="01">1</option>
+                    <option value="02">2</option>
+                    <option value="03">3</option>
+                </select>
+                <select name="month-of-birth" id="month-of-birth">
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                </select>
+                <select name="year-of-birth" id="year-of-birth">
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                </select><br><br>
+                <!--above are the dropdown-->
+                
+                <label for="gender">Gender</label><br>
+                <label for="female">Female</label>
+                <input type="radio" value="female" name="gender" id="female">
+                <label for="male">Male</label>
+                <input type="radio" value="male" name="gender" id="male">
+                <label for="custom">Custom</label>
+                <input type="radio" value="custom" name="gender" id="custom"><br>
+                <!--name should be only one and it should be common for all input names-->
+                
+                <p>People who use our service may have uploaded your contact information to Facebook. Learn more.</p>
+                <p>By clicking Sign Up, you agree to our Terms, Privacy Policy, and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+                <input type="submit" value="Sign Up"><br><br><!--value is given wt text should be displayed in the submit button-->
+                <a href="D:\Web Development Practice\AchieversIT UI-ReactJS Practice session\Facebook-login-form.html">Already have an account?</a>
+            </form>
+        </section>
+    </section>
+</body>
+</html>

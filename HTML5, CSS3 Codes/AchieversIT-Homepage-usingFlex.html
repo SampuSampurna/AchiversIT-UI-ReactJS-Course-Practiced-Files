@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AchiversIT-HomePage-Flexbox</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            padding: 0 40px;
+            background-color: #343a40;
+        }
+
+        header section {
+            flex: 1;
+        }
+
+        header nav {
+            flex: 4;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: end;
+        }
+
+        header img {
+            height: 55px;
+        }
+
+        header li {
+            list-style: none;
+            padding: 0 15px;
+
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+
+
+        }
+
+        .knowmore-maincontainer {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 0 94px;
+
+        }
+
+        .knowmore-container {
+            padding: 0 20px;
+            flex: auto;
+            margin-right: 3%;
+            border-width: 10px;
+            background-color: whitesmoke;
+
+            margin-top: -36px;
+
+
+        }
+
+        #para {
+            float: right;
+            margin-top: -45px;
+            color: blueviolet;
+            font-weight: bold;
+        }
+
+        .trendingcourses-maincon {
+            padding: 0 94px;
+        }
+
+        .trendingcourses-maincon h1 {
+            font-size: 30px;
+        }
+
+        .trendingcourses-container {
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .trendingcourses-container section {
+            width: 23%;
+            border: 1px solid wheat;
+            margin-bottom: 2%;
+        }
+
+        .occ-container {
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .occ-container section {
+            width: 15%;
+            border: 1px solid wheat;
+            margin-bottom: 2%;
+        }
+
+        .trendingcourses-indcont h1 {
+
+            margin-top: 0;
+        }
+
+
+        #tci {
+            padding: 0 5px;
+            margin-top: -30px;
+            margin-left: 0;
+        }
+
+        .trendingcourses-indcont hr {
+            margin: 0 8px;
+        }
+
+        .trendingcourses-indcont p {
+            margin: 80px 8px 15px;
+
+        }
+
+        .dtp-maincon {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 94px;
+        }
+
+        .dtp-maincon section {
+            width: 15%;
+            border: 1px solid wheat;
+            margin-bottom: 4px;
+            height: 40px;
+        }
+
+        .dtp-maincon h1 {
+            margin-left: 4%;
+        }
+
+        .hd {
+            margin-left: -100px;
+        }
+
+        .contactus {
+            text-align: center;
+            background-color: aqua;
+            padding: 25px;
+            margin: 40px 0;
+        }
+
+        .contactus button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .b-contactus {
+            background-color: black;
+            padding: 35px;
+            margin: 40px 0;
+            color: white;
+        }
+
+        .b-contactus button {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: white;
+            border: none;
+            color: blue;
+        }
+
+        .b-contactus section {
+            margin-left: 20%;
+        }
+
+        .edge {
+
+            padding: 0 94px;
+            margin-left: 4px;
+        }
+
+        .indiedge {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .indiedge section {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .mp {
+            text-align: center;
+        }
+
+        #otf {
+            height: 200px;
+            background-color: pink;
+            border-radius: 20px;
+            background: linear-gradient(to right, rgb(226, 188, 50), rgb(194, 46, 162), rgb(59, 181, 229));
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        .ljo {
+
+            padding: 0 94px;
+            margin-left: 4px;
+        }
+
+        .ljo-container {
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+        }
+
+        .ljo-container section {
+            width: 40%;
+            padding: 40px;
+            border: 1px solid black;
+            margin-bottom: 2%;
+            background-color: darkblue;
+            color: white;
+        }
+
+        .knowaboutus {
+            background: linear-gradient(to right, rgb(71, 71, 222), rgb(7, 62, 107));
+            color: white;
+
+            padding: 0 10%;
+
+        }
+
+        .knowaboutus h1 {
+            padding-top: 25px;
+            font-size: 30px;
+        }
+
+        .knowaboutus h1,
+        p {
+            text-align: center;
+        }
+
+        .location-maincain {
+            padding: 0 94px;
+        }
+
+        .location-maincain h1,
+        p {
+            text-align: center;
+        }
+
+        .location-indcain {
+            display: flex;
+            justify-content: space-around;
+            margin: 0 10%;
+            flex-wrap: wrap;
+        }
+
+        .location-indcain section {
+            width: 30%;
+            text-align: center;
+            border: 1px solid black;
+            padding-bottom: 10%;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+            margin-top: 30px;
+
+        }
+
+        footer section {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section>
+            <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="AchieversITlogo" />
+        </section>
+        <nav>
+            <ul>
+                <li><a href="#">All Courses</a></li>
+                <li><a href="#">Corporate Training</a></li>
+                <li><a href="#">Placements</a></li>
+                <li><a href="#">Internship</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img src="https://betechacademy.in/wp-content/uploads/2021/09/Reactjs-create-and-include-hedar-footer-files.png"
+                alt="reactjs-img" height="300px" width="100%">
+        </section>
+        <section class="knowmore-maincontainer">
+            <div class="knowmore-container">
+                <p>Become a <br> <b>UI Developer</b></p>
+                <p id="para">Know More</p>
+            </div>
+            <div class="knowmore-container">
+                <p>Become a <br> <b>Angular Developer</b></p>
+                <p id="para">Know More</p>
+            </div>
+            <div class="knowmore-container">
+                <p>Become a <br> <b>ReactJS Developer</b></p>
+                <p id="para">Know More</p>
+            </div>
+
+        </section>
+        <section class="trendingcourses-maincon">
+            <h1>TRENDING COURSES</h1>
+            <section class="trendingcourses-container">
+                <section class="trendingcourses-indcont">
+                    <h1
+                        style="background: linear-gradient(to right, rgb(255, 80, 168),rgb(255, 0, 111)); color: white; ">
+                        ANGULAR<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+
+                <section class="trendingcourses-indcont">
+                    <h1 style="background: linear-gradient(to right, coral,rgba(255, 166, 0, 0.281)); color: white; ">
+                        REACT<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <h1
+                        style="background: linear-gradient(to right, rgb(95, 80, 255),rgb(255, 0, 238)); color: white; ">
+                        MEAN STACK<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <h1
+                        style="background: linear-gradient(to right, rgb(118, 255, 80),rgb(0, 221, 255)); color: white; ">
+                        MERN STACK<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <h1
+                        style="background: linear-gradient(to right, rgba(95, 80, 255, 0.532),rgb(0, 179, 255)); color: white; ">
+                        WEB<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <h1 style="background: linear-gradient(to right, rgb(80, 203, 255),white); color: white; ">
+                        DIGITAL<br>MARKETING<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <h1
+                        style="background: linear-gradient(to right, rgb(255, 80, 182),rgb(230, 0, 255)); color: white; ">
+                        REACT NATIVE<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <h1
+                        style="background: linear-gradient(to right, rgba(255, 103, 80, 0.703),rgb(255, 119, 0)); color: white; ">
+                        ICONIC<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+
+            </section>
+        </section>
+        <section class="trendingcourses-maincon">
+            <h1>RECENT ADDITIONS</h1>
+            <section class="trendingcourses-container">
+                <section class="trendingcourses-indcont">
+                    <h1
+                        style="background: linear-gradient(to right, rgb(86, 255, 80),rgb(0, 183, 255)); color: white; ">
+                        UI<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+
+                <section class="trendingcourses-indcont">
+                    <h1
+                        style="background: linear-gradient(to right, rgba(95, 80, 255, 0.368),rgb(0, 174, 255)); color: white; ">
+                        VUEJS<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <h1 style="background: linear-gradient(to right, rgb(80, 197, 255),white); color: white; ">
+                        WORDPRESS<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <h1
+                        style="background: linear-gradient(to right, rgba(255, 98, 80, 0.67),rgb(255, 77, 0)); color: white; ">
+                        PYTHON<br>DEVELOPEMENT<br>COURSE</h1>
+                    <p id="tci">Angular is popular for making dynamic applications and its information offical and
+                        reliance infusion includes altogether lesse............</p>
+                    <hr>
+                    <p>Reviews</p>
+                </section>
+
+            </section>
+            <section class="trendingcourses-maincon">
+                <h1 class="hd">RECENT ADDITIONS</h1>
+                <section class="dtp-maincon">
+                    <section>DevOps</section>
+                    <section>Front-End</section>
+                    <section>Mobile App Dev</section>
+                    <section> Digital Marketing</section>
+                    <section> Program & Frame Works</section>
+                    <section>Data Types</section>
+                    <section>Software Testing</section>
+                    <section>Cloud Computing</section>
+                    <section> Cyber Security</section>
+                    <section>Artificial Intelligence</section>
+                    <section>Python</section>
+                    <section>Big Data</section>
+
+                </section>
+
+            </section>
+
+            <section class="trendingcourses-maincon">
+                <h1 class="hd">REVIEWS</h1>
+                <section class="trendingcourses-container">
+                    <section class="trendingcourses-indcont">
+                        <h1
+                            style="background: linear-gradient(to right, rgba(255, 80, 80, 0.845),rgb(255, 128, 0)); color: white; padding:30px">
+                            MALLIKA M</h1>
+
+                        <p>Angular Certification Training<br>
+
+                            I had recently attended the Angular js Training in AchieversIT, I must say they were
+                            outstanding.
+
+                        </p>
+                        <p>Read More</p>
+                    </section>
+
+                    <section class="trendingcourses-indcont">
+                        <h1
+                            style="background: linear-gradient(to right, rgba(95, 80, 255, 0.567),rgb(0, 183, 255)); color: white; padding:30px">
+                            LAKSHMI </h1>
+
+                        <p>Digital Marketing Certification Training<br>
+
+                            AchieversIT provides an excellent way to learn from professional trainers. I</p>
+                        <p>Read More</p>
+                    </section>
+                    <section class="trendingcourses-indcont">
+                        <h1
+                            style="background: linear-gradient(to right, rgb(255, 80, 182),rgb(230, 0, 255)); color: white; padding:30px">
+                            KIRAN CSN</h1>
+
+                        <p>UI & Angular Certification Training<br>
+
+                            Hi,I am Dwaraka from BTech(Mechanical) background</p>
+                        <p>Read More</p>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="contactus">
+            <section>Enroll, Learn, Grow, Repeat! Get ready to achieve your learning goals with Acheivers IT</section>
+            <section><button>Contact Us</button></section>
+        </section>
+        <section class="edge">
+            <h1>Acheivers IT Edge</h1>
+            <section class="indiedge">
+                <section><b>Real Time Doubt Resolution</b> <br> With Live Instructiors</section>
+                <section><b>Real Time Doubt Resolution</b> <br> With Live Instructiors</section>
+                <section><b>Real Time Doubt Resolution</b> <br> With Live Instructiors</section>
+                <section><b>Real Time Doubt Resolution</b> <br> With Live Instructiors</section>
+            </section>
+        </section>
+        <section class="trendingcourses-maincon">
+            <h1>Our Trainers From</h1>
+            <section class="trendingcourses-container">
+                <section class="trendingcourses-indcont">
+                    <p class="mp">Cognizant</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">HCL</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">INFOSYS</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">ACCENTURE</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">ORACLE</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">IBM</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">AMAZON</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">VISA</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">wipro</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">FLIPKART</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">DELL</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp"> GENPACT</p>
+                </section>
+            </section>
+        </section>
+
+
+
+        <section class="trendingcourses-maincon">
+            <h1>AchieversIT Process</h1>
+            <section class="trendingcourses-container">
+                <section class="trendingcourses-indcont" id="otf">
+                    <p class="mp">ASSIGNMENTS + MOCK <br>INTERVIEW</p>
+                </section>
+
+
+            </section>
+        </section>
+
+        <section class="trendingcourses-maincon">
+            <h1>Latest Job Openings</h1>
+            <section class="ljo-container">
+                <section class="trendingcourses-indcont">
+                    <p class="mp">Frond End Developer - Angular js,Nodejs <br> <br> Location:banglore</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">Senior Software Engineer - Java Full Stack Developer <br> <br>Location:Banglore</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">UI Developer - AngularJS Frameworks<br><br> Location:Banglore</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">Python Developer (Fresher) Requirements<br><br> Location:Banglore</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">UI UX Designer / Developer<br> <br>Location:Banglore</p>
+                </section>
+                <section class="trendingcourses-indcont">
+                    <p class="mp">.Net senior Developer - 5positions<br> <br>Location:Banglore</p>
+                </section>
+
+
+
+            </section>
+        </section>
+        <section class="b-contactus">
+            <section>Acheivers IT ! for business<br><br>
+                No more dull edges in your company.Make your employees into masters....<br><br>
+                Nurture talent with instructor-led courses on trending technologies<br><br></section>
+            <section><button>Contact Us</button></section>
+        </section>
+        <section class="trendingcourses-maincon">
+            <h1>Our Corporate Clients</h1>
+            <section class="occ-container">
+                <section class="occ-indcont">
+                    <p class="mp">Cognizant</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">HCL</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">INFOSYS</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">ACCENTURE</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">ORACLE</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">Cognizant</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">HCL</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">INFOSYS</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">ACCENTURE</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">ORACLE</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">ACCENTURE</p>
+                </section>
+                <section class="occ-indcont">
+                    <p class="mp">ORACLE</p>
+                </section>
+
+
+            </section>
+        </section>
+        <section class="knowaboutus">
+            <h1>KNOW US BETTER FOR YOUR FUTURE !</h1>
+            <hr>
+            <p>We, AchieversIT are here to assist you in gaining the best deal of knowledge and landing at your dream
+                job. Fresher or experienced, we always have a hope to hop into new domains and fields to quicken up the
+                pace in our career growth. AchieversIT is dedicated to its services to enhance your skills to make a
+                better move towards a better future in your career.</p>
+            <p>AchieversIT has been delivering outstanding quality training in IT sector courses. 8 years of experience
+                in furnishing qualitative training, AchieversIT has gained its own fame in leading an individual to land
+                at their dream job.</p>
+            <p>Are you looking out for a job or job switch? Despite the fact that your background relates to technical
+                or non-technical, you can always find a choice for you with us. AchieversIT is your best training
+                partner to help you move forward in your career with confidence and ample amount of knowledge.
+                AchieversIT provides different trainings to boost up your vocation, namely :
+
+            </p>
+            <p>You get to attend JOB-Oriented training with real-time knowledge and live projects which comes at an
+                affordable price with effective Instructor-led sessions.</h2>
+            <p>We, at AchieversIT strive to deliver our best efforts; and concentrate and help you in achieving your
+                dream job you always wished for. We are dedicated to deliver excellence and impart knowledge to the
+                individuals aspiring a career in not only IT sectors but also in various other fields like Digital
+                Marketing, Project Management etc. Our curriculum for all the courses is reviewed systematically to keep
+                our candidates at the cutting edges of technologies.</p>
+            </p>
+            <ol>
+                <li>
+                    <dt>Front-end-Course</dt>
+                    <dd>User Interface Development ; Web Interface Development ; Angular Training ; ReactJS
+                        Development ; VueJS Development ; BootStrap Development ; Material Development.</dd>
+                    <ul>
+                        <li>AchieversIT can be listed out as the best UI Development training centre, whereas
+                            locates UI Development training in Bangalore ; UI Development training in Marathahalli ;
+                            also benefits as UI training online and UI Developer training.</li>
+                        <li>AchieversIT stands out as the best Angular Development training centre, whereas locates
+                            Angular Development training in Bangalore ; Angular training in Marathahalli; also
+                            benefits as Angular training online and Angular online training. Also the courses come
+                            with variations like Angular UI Bootstrap ; AngularJS UI Bootstrap ; Angular JavaScript
+                            ; JavaScript AngularJS.</li>
+                        <li>AchieversIT is stated as the best ReactJS training centre, whereas locates ReactJS
+                            training in Bangalore ; ReactJS development training in Bangalore; React training in
+                            BTM; ReactJS training in Marathahalli; also benefits as ReactJS training online and
+                            ReactJS online training ; React training ; React native training.</li>
+                    </ul>
+                </li>
+                <li>
+                    <dt>Back-end Courses:</dt>
+                    <dd>Microsoft.NET ; PHP ; Python ; Ruby ; Java </dd>
+                </li>
+                <li>
+                    <dt>Mobile Development Courses :</dt>
+                    <dd>Android App Development ; IOS App App Development ; Windows App Development ; Hybrid App
+                        Development.</dd>
+                </li>
+                <li>
+                    <dt>Full Stack Development Courses :</dt>
+                    <dd>Java Full Stack Training ; Net Full Stack Training ; Node.JS Full Stack Training ; PHP Full
+                        Stack Training ; MEAN Full Stack Training ; MERN Full Stack Training.</dd>
+                </li>
+                <li>
+                    <dt>Digital Marketing Courses :</dt>
+                    <dd>Digital Marketing ; Affiliate Marketing ; Email Marketing ; Google Analytics ; Lead
+                        Generation ; Remarketing ; Search Engine Optimization ; SMS Marketing ; Social Media
+                        Marketing ; WordPress.</dd>
+                </li>
+                <li>
+                    <dt>Database Programming Courses :</dt>
+                    <dd>MySQL Training ; Oracle Training ; Mongo DB Training ; NoSQL Training ; PostgreSQL Training.
+                    </dd>
+                </li>
+                <li>
+                    <dt>Project Management Courses :</dt>
+                    <dd> Prince2 Training ; PMP Training ; Six Sigma Training.</dd>
+                </li>
+            </ol>
+            <h2 style="text-align: center;">Apart from imparting skills and knowledge, AchieversIT comes up with
+                flexible modes of training :
+
+            </h2>
+            <ol>
+                <li>Classroom Training in Bangalore</li>
+                <li>Live Virtual Training with Instructor-Led Sessions</li>
+                <li>Self-Study (e-Learning)</li>
+            </ol>
+            <h2 style="text-align: center;">You can choose your mode of training according to your comfort and achieve
+                your courses with certifications.
+
+            </h2>
+            <h3>Perks and advantages of learning with AchieversIT :</h3>
+            <ol class="know-us-font">
+                <li>
+                    90 hours of training
+                </li>
+                <li>Reasonable course fees</li>
+                <li>200 hours of lab practical sessions under experts’ mentorship</li>
+                <li>Hands-on experience with case studies with real-time examples</li>
+                <li>24*7 access and support by the team</li>
+                <li>Industry experts &amp; Certified trainers</li>
+                <li>100% placement support</li>
+                <li>Industry-aligned curriculum with current market trends and needs</li>
+                <li>Extra hours of inputs for non-technical individuals</li>
+                <li>Flexible mode of learning</li>
+            </ol>
+            <h2 style="text-align: center;">You get to attend JOB-Oriented training with real-time knowledge and live
+                projects which comes at an affordable price with effective Instructor-led sessions.</h2>
+            <p style="padding-bottom: 40px;">We, at AchieversIT strive to deliver our best efforts; and concentrate and
+                help you in achieving your dream job you always wished for. We are dedicated to deliver excellence and
+                impart knowledge to the individuals aspiring a career in not only IT sectors but also in various other
+                fields like Digital Marketing, Project Management etc. Our curriculum for all the courses is reviewed
+                systematically to keep our candidates at the cutting edges of technologies.</p>
+        </section>
+
+        <section class="location-maincain">
+            <h1>Locations</h1>
+            <p>Come and discuss with us about your goals ,We transform your goals into success!!!</p>
+            <section class="location-indcain">
+                <section>BTM Layout - Bangalore<br>
+                    #63, 1st Floor, 16th Main, 8th Cross BTM 1st Stage, BTM Layout, Bengaluru, Karnataka 560029
+                </section>
+                <section>Marathahalli - Bangalore<br>
+                    #1, 4th Main Rd, Extension, Ayyappa Layout, Chandra Layout, Marathahalli, Bengaluru, Karnataka
+                    560037
+                </section>
+                <section>Kukatpally - Hyderabad<br>
+                    #63, 1st Floor, 16th Main, 8th Cross BTM 1st Stage, BTM Layout, Bengaluru, Karnataka 560029
+                </section>
+                <section> Mumbai - Maharasthra<br>
+                    #63, 1st Floor, 16th Main, 8th Cross BTM 1st Stage, BTM Layout, Bengaluru, Karnataka 560029
+                </section>
+                <section> Pune - Maharasthra<br>
+                    #63, 1st Floor, 16th Main, 8th Cross BTM 1st Stage, BTM Layout, Bengaluru, Karnataka 560029
+                </section>
+                <section>Chennai - Tamilnadu<br>
+                    #63, 1st Floor, 16th Main, 8th Cross BTM 1st Stage, BTM Layout, Bengaluru, Karnataka 560029
+                </section>
+            </section>
+
+
+    </main>
+    <footer>
+
+        <section>
+
+            <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="AchieversITlogo" height="55px" />
+            <p>AchieversIT - Provides a wide group of opportunities for freshers and Experienced candidate who can
+                develop their skills and build their career opportunities across multiple Companies.</p>
+        </section>
+        <section>
+            <h3>COMPANY</h3>
+            <ul>
+                <li>Home
+
+
+                </li>
+                <li>Placements</li>
+                <li>Corporate Training</li>
+                <li>Contact US</li>
+
+            </ul>
+        </section>
+        <section>
+            <h3>TRENDING COURSES</h3>
+            <ul>
+                <li>UI Development Course</li>
+                <li>Angular JS Course</li>
+                <li>React JS Course</li>
+                <li>Digital Marketing Course</li>
+                <li>Python Course</li>
+            </ul>
+        </section>
+        <section>
+            <h1>CONTACT INFO</h1>
+            <li>#63, 1st Floor, 16th Main, 8th Cross,BTM 1st Stage, Bangalore, India - 560029</li>
+            <li>India : +91 8431-040-457</li>
+            <li>info@achieversit.com</li>
+        </section>
+
+    </footer>
+
+
+</body>
+
+</html>

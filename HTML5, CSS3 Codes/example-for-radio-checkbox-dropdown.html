@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example for radio checkbox dropdown</title>
+</head>
+<body>
+   <!-- difference between radio-checkbox-dropdown
+        radio - it is used for slect only one option from two or three options only
+        checkbox - it is used for select more than one from given options and also wen can't give more options line 100 this occupy more space then dropdown is used
+        dropdwon - it takes less space and gives more options to satify user--> 
+   <form>
+    <label for="gender">select your gender:</label><br>
+    <label for="female">Female</label>
+    <input type="radio" value="female" id="female" name="gender">
+    <label for="male">Male</label>
+    <input type="radio" value="male" id="male" name="gender">
+    <label for="custom">Custom</label>
+    <input type="radio" value="custom" id="custom" name="gender"><br><br>
+
+    <label for="prices">Select your price range:</label><br>
+    <input type="checkbox" name="prices" value="1000-2000" id="1000-2000">
+    <label for="1000-2000">1000-2000</label><br>
+    <input type="checkbox" name="prices" value="2000-3000" id="2000-3000">
+    <label for="2000-3000">2000-3000</label><br>
+    <input type="checkbox" name="prices" value="3000-4000" id="3000-4000">
+    <label for="3000-4000">3000-4000</label><br>
+    <input type="checkbox" name="prices" value="4000-5000" id="4000-5000">
+    <label for="4000-5000">4000-5000</label><br><br>
+
+    <label for="age">Select your age:</label><br>
+    <select name="age" id="age">
+        <option value="" disabled selected>Select your age</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+    </select>
+    
+    </form>
+</body>
+</html>
