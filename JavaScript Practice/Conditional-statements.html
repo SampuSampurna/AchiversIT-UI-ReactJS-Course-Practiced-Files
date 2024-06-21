@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        Conditional Statements:
+        if u want output based on some conditions only then u can use conditional statements
+        there are mainly 5 types:
+        1.simple-if  - there is only one condition is there
+                        syntax:  if(condition){
+                                   //block of code 
+                                }
+
+        2.if-else   - if statement is false then else block of code will gives output
+                       syntax:  if(condition){
+                                    //block of code 
+                                }
+                                else{  
+                                    //block of code             
+                                }
+        3.else if ladder - if u want to check multiple conditions then u can go with these
+                        syntax:  if(condition){
+                                    //block of code
+                                }
+                                else if(condition){
+                                    //block of code
+                                }
+                                else if(condition){
+                                    //block of code
+                                }
+                                else{
+                                //block of code
+                                }
+        4.nested if  - loop inside the loop 
+                        syntax: if(condition){
+                                     if(condition){
+                                      //block of code
+                                     }
+                                      else{
+                                      //block of code
+                                      }
+                                }
+                                else{
+                                   //block of code
+                                }
+    
+        5.switch - u can use else if ladder also inplace of switch but y switch means to reduce the number of lines in code and switch gives better performance than else if ladder
+                    syntax: switch(expression){
+                               case value1:
+                                //block of code;
+                                break;
+                              case value2:
+                                //block of code;
+                                break;
+                              case value3:
+                                //block of code;
+                                break;
+
+                              default:
+                                //block of code
+
+                            }
+
+                            break is mandatory to write because if u not write break then remaining all statements are excuted to avoid excuting other statements break is used
+
+                            if u want input from user then u can use prompt()
+
+        */
+
+        //simple if
+        let x = 10;
+        if (x > 5) {
+            document.write('x is greater');
+        }
+
+        //if else
+        if (x > 5) {
+            document.write('x is greater');
+        }
+        else {
+            document.write('x is lesser');
+        }
+
+        //else if ladder
+        if (x == 2) {
+            document.write('x is 2');
+        }
+        else if (x == 4) {
+            document.write('x is 4');
+        }
+        else if (x == 6) {
+            document.write('x is 6');
+        }
+        else if (x == 10) {
+            document.write('x is 10');
+        }
+        else {
+            document.write('x value is not in given values');
+        }
+
+        //nested if
+        if (x > 5) {
+            if (x == 10) {
+                document.write('x value is 10');
+            }
+            else {
+                document.write('x value is not 10')
+            }
+        }
+        else {
+            document.write('x value is less than 5')
+        }
+
+        //switch 
+        let weekdayno = prompt("enter weekday and i will tell u name of that day");
+        switch (weekdayno) {
+            case '1':
+                document.write('sunday');
+                break;
+            case '2':
+                document.write('monday');
+                break;
+            case '3':
+                document.write('tuesday');
+                break;
+            case '4':
+                document.write('wednesday');
+                break;
+
+            case '5':
+                document.write('thursday');
+                break;
+
+            case '6':
+                document.write('friday');
+                break;
+
+            case '7':
+                document.write('saturday');
+                break;
+            default:
+                document.write('enter valid day u have only 7 days in week')
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
