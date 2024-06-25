@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown options using javascript</title>
+</head>
+<body>
+    <select id="name-of-day"></select>
+    <select id="day"></select>
+    <select id="month"></select>
+    <select id="year"></select>
+    <script>
+        let opt="<option>--name-of-day--</option>";
+        namesOfDays=["Sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+        for(let a=0;a<=6;a++){
+            opt+="<option>" +namesOfDays[a]+ "</option>";
+        }
+        document.getElementById("name-of-day").innerHTML=opt;
+    
+        let opt1="<option>--Day--</option>";
+        for(let i=1; i<=31; i++) {
+            opt1+="<option>" +i+ "</option>";
+        }
+        document.getElementById("day").innerHTML=opt1;
+
+        let opt2="<option>--month--</option>";
+        for( let j=1; j<=12; j++){
+            opt2+="<option>" +j+ "</option>";
+        }
+        document.getElementById("month").innerHTML=opt2;
+
+        let opt3="<option>--Year--</option>";
+        for(let k=2024; k>=1990; k--){
+            opt3+="<option>" +k+ "</option>";
+        }
+        document.getElementById("year").innerHTML=opt3;
+    </script>
+    
+</body>
+</html>

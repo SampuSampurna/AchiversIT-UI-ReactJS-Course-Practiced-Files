@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Course</title>
+</head>
+<body>
+    <select id="coursename"></select>
+    <select id="courseduration"></select>
+    <select id="branch"></select>
+    <script>
+        let opt1="<option>--CourseName--</option>";
+        course_names=["HTML", "CSS", "JS", "JAVA", "REACTJS", "NODEJS", "PYTHON", "SAP"];
+        for(let i=0; i<=7; i++){
+            opt1 += "<option>" +course_names[i] + "</option>";
+        }
+        document.getElementById("coursename").innerHTML=opt1;
+
+        let opt2="<option>--CourseDuration--</option>";
+        course_duration=[3,4,6,9,12];
+        for(let j=0; j<=4; j++){
+            opt2+="<option>" +course_duration[j] + "</option>";
+        }
+        document.getElementById("courseduration").innerHTML=opt2;
+
+        let opt3="<option>--Branch--</option>";
+        branch=["Marathahalli-Banglore", "BTM Layout-Banglore", "Hyderabad", "Chennai", "US"];
+        for(let k=0;k<=4;k++){
+            opt3+="<option>" +branch[k] + "</option>";
+        }
+        document.getElementById("branch").innerHTML=opt3;
+    </script>
+</body>
+</html>
