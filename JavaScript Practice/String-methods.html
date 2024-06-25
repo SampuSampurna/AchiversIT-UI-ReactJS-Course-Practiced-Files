@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+<body>
+    <!--
+      String methods can be declared in two ways:
+      1.String literals    - Normal string variable, mostly this method is used
+      2.String constructor - using new keyword, it is advanced and used in oops concept
+
+      string methods:
+      1.string.length        -length of the string
+      2.string.at(index)     -it is latest version of charAt()
+      3.string.chatAt(index)  -give same output as at()
+      4.string.charCodeAt(index) -it gives ascii values ascii-american standard cde for information interchange
+
+      5.string.slice(startindex, endindex)   -it is latest verion, if u didnt give any last value it takes length of the string, same way u didnt given startindex means it takes starting index
+      6.string.substring(startindex, endindex)
+      7.string.substr(startindex, endindex)
+
+      8.string.toUpperCase()   -converts string to uppercase
+      9.string.toLowerCase()   -converts string to lowercase
+
+      10.string.concat("str1", "str2", "strn") -we can add string at the end of the exsting string
+      11.string.trim()                         -remove spaces before and ending string only it wont remove middle of the string spaces
+      12.string.trimStart()                    -remove spaces before the string only
+      13.string.trimEnd()                      -remove spaces after the string only
+
+      14.string.padStart(totallengthofstring, "string") -to add string before and give length of the total string also
+      15.string.padEnd(totallengthofstring, "string")   - to add string after and give length of the total string also
+
+      16.string.repeat(noof times)    - if u want to repeat so many times of same string
+      17.string.replace("existing str","new str")   -if ur string had muliple values of same it replaces only at first place only
+      18.string.replaceAll("existing str","new str") - it replaces all the places
+    -->
+    <script>
+        let name="Sampu Sampurna";
+        console.log(name);
+        console.log(name.length);
+        let name1=new String("Hello Guys!");
+        console.log(name1);
+        console.log(name1.length);
+
+        console.log(name.at(2));
+        console.log(name.charAt(2));
+        console.log(name.charCodeAt(2));
+
+        console.log(name.slice(0,5));
+        console.log(name.substring(4,));
+        console.log(name.substr(1,3));
+
+        console.log(name.toUpperCase());
+        console.log(name.toLowerCase());
+
+        console.log(name.concat("  Hello guys,", " How", " are", " you?"));
+        let coursename="  Web Developement  ";
+        console.log(coursename);
+        console.log(coursename.trim());
+        console.log(coursename.trimStart());
+        console.log(coursename.trimEnd());
+
+        console.log(name.padStart(17,"hi "));
+        console.log(name.padEnd(18," bye"));
+
+        console.log(name.repeat(4));
+        console.log(name.replace("S", "s"));
+        console.log(name.replaceAll("S","s"));
+        
+    /* We can store these values into another variables
+        let startingTrim=name.trimStart();
+        let endingTrim=name.trimEnd();
+        let triming=name.trim();
+        console.log(name);
+        console.log(startingTrim);
+        console.log(endingTrim);
+        console.log(triming);  */
+    </script>
+</body>
+</html>
