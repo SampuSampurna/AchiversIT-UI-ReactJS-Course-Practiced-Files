@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+   <script> 
+   /* 
+   loops - loops are used to iterate block of code until condition if fails
+   there are 5 types:
+   1.for loop    - syntax:
+                     for(intialization,condition,increment/decrement){
+                     //block of code
+                     }
+   2.for in loop
+   3.for of loop
+   4.while loop  - syntax:
+                   intialization;
+                   while(condition){
+                   //block of code
+                   } 
+
+   5.do while loop - syntax:            
+                     intialization;
+                     do{
+                     //block of code
+                     }while(condition)
+    while vs do-while: while loop is entryflow means first it check the condition later it will excute and 
+                    do-while loop is exitflow means first it excutes and later it will check for the condition
+
+    conditional statements vs loops:
+      conditional statements excutes block of code  only one time whether if condition true it excutes if block or else block
+      while loops excutes block of code multiple times until condition is false it is iteratable.
+    
+    for loop vs while loop vs do-while loop:
+    1.syntax - for three loops syntax is difference
+    2.for loop and while loop are entry flow means first check the condition if it true then only it excutes block of code
+      do-while loop is exit flow means first excutes block of code then if check the codition 
+
+    two main keywords:
+    break    - it comes out from the block of code means after break it wont excutes
+    continue - it skip the one iteration when condition true
+
+    break vs continue:
+    break is used to comes out from the block of code while continue is to skip purpose only
+
+   */
+
+   //for loop
+   document.write("print even numbers upto 20: <br />");
+    for(let x=2; x<=20; x+=2){
+    document.write(x + "<br />");
+    }
+
+   //while loop
+   document.write("<br /> print multiples of 10 upto 100: <br />");
+   let x=10;
+   while(x<=100){
+     document.write(x + "<br />");
+     x+=10;
+    }
+
+    //do while
+    document.write("<br /> print multiples of 10 in reverse order: <br />");
+    let z=100;
+    do{
+        document.write(z + "<br />");
+    }while(z-=10);
+   </script>
+</body>
+</html>
