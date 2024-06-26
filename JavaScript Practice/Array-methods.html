@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <!--
+    array can be defined as collecting data of different data types within []-brackets
+    by default arrays, objects, array of objects are object data type, i.e.,non primitive data types gives object data type
+    Array can be declared in two ways
+    1.Array Literals    - noraml simple array datatype
+    2.Array Constructor - by using new keyword
+    for best practice use const variable type
+
+    Array accessing can be done in two ways:
+    1.Using index 
+    2.using for loops - here two types of for loops 
+                        1.for in
+                        2.for of
+
+    Array Methods:
+    important thing should remeber here - dot . is one special operator named as member operator 
+                                           it is used to access the properties of an object
+    1.length - one property to know the lenth of the array
+    2.atindex)
+    3.push('elements') //we can add one or multiple values
+    4.pop()
+    5.shift()    //we can do modification from beginning and remove from begining
+    6.unshift(elemets u want to add) //addin elemts from begining
+    7.concat()
+    8.slice()
+    9.splice() - (index value form where u want to change, no of values u want to delete, elements u want to )
+    10.toSpliced -same syntax od splice
+    11.sort()
+    12.reverse()
+    13.index()
+    14.lastIndex
+    
+    important interview question:
+    1. difference between array methods and string methods
+    A. modifications in string is temporary it dont chnage the original array
+       modifications in array is permanent it changes the original array
+    2.difference between push and pop
+    A.push() - adds the element at the end of the array
+      pop() - removes the element from the end of the array
+      and also push() gives the output of total length of array after adding element also
+      pop() gives the output of removed element from the array
+    3.difference between splice and toSpliced
+    A.splice() - removes and  add the element from the array and also gives the output of removed element from
+                 the array and also modifies the original array
+    toSpliced() -removes the element from the array and also gives the output of removed element
+                 from the array but does not modify the original array
+
+  
+    -->
+
+    <script>
+        //array declaration 
+        const data1=["html","css",23,55,true,false];
+        console.log(data1);
+        console.log(typeof data1); 
+        const data2=new Array("html","css",23,55,true,false);
+        console.log(data2);
+        console.log(typeof data2); 
+
+        //array elements accessing using index 
+        console.log(data1[0]);
+        console.log(data1[1]);
+        console.log(data1[2]);
+        console.log(data1[3]);
+        console.log(data1[4]);
+        console.log(data1[5]);
+
+        //datatype of individual elements in array
+        console.log(typeof data1[1]);
+        console.log(typeof data1[3]);
+        console.log(typeof data1[5]);
+
+        //array elemets accessing using for loop - here use object.length for best practice
+        for(let i=0;i<data1.length;i++){
+            console.log(data1[i]);
+        }
+        //array elements accessing using for in loop - both index and elements can be accessed
+        for(i in data1) {
+            console.log(i);
+        }
+        for(i in data1) {
+            console.log(data1[i]); 
+        }
+        for(i in data1) {
+            console.log(i+" --> "+data1[i]);
+        }
+        //array elements accessing using for of loop - only elements can be accessed
+        for(i of data1) {
+            console.log(i); 
+        }
+
+       //ArrayMethods
+       console.log(data1);
+       console.log(data1.length);
+       console.log(data1.at(2));
+       console.log(data1.push("js","java","react"));  
+       console.log(data1);
+       console.log(data1.pop());
+       console.log(data1);
+       console.log(data1.shift());
+       console.log(data1);
+       console.log(data1.unshift("html","html5"));
+       console.log(data1);
+       console.log(data1.concat('sap','powerbi'))
+       console.log(data1.concat(data2));
+       console.log(data1);
+       console.log(data1.slice(1,4));
+       console.log(data1);
+       console.log(data1.splice(3,0,"ds","ai","ml"));
+       console.log(data1);
+       console.log(data1.toSpliced(3,3,"ds","ai","ml"));
+       console.log(data1);
+       let data3=[24,35,87,245,197,69,93,8235];
+       let data4=['ai','ml','ds','sys','rbt','ds'];
+       console.log(data3.sort());
+       console.log(data4.sort());
+       console.log(data4);
+       console.log(data4.reverse());
+       console.log(data4.indexOf('ds'));
+       console.log(data4.lastIndexOf('ds'));
+       console.log(data4.index('z')); //it gives ouput as -1 becauese z in not there in array
+
+
+    
+    </script>
+</body>
+</html>
