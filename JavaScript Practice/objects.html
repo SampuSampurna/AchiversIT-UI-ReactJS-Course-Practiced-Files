@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <!-- 
+    Objects - these are used to store data in format of key:value within {}
+    we can store large size of data like student data base and can be access by key 
+    object are of also has nested object means one object within the object and each object is seperated by comma(,)
+    and after last property we dont need any comma and after the object keep comma for better understanding
+    object can be accessed by using the . operator 
+    . dot is a special operator named as member
+    in two way we can acces objects values
+    1.using normal way each individually every time console.log()  we use .operator to access
+    2.using for loops  here we should use [] because . dot operator not works here 
+    
+    adding- we can add elements 
+            syntax: 
+                 object_name.new_key=new_value
+    deleting- we can delete elements 
+            syntax:
+                  delete object_name.new_key
+
+    three methods are there
+    1.object.key(object_name) - to print the keys of the object
+    2.object.values(object_name) - to print the values of the object
+    3.object_name.hasOwnProperty("key") - to check that key value is present or not if it present returns true otherwise it gives false
+    -->
+    <script>
+        let data={
+            name:"sampu",
+            age:21,
+            gender:"female",
+            course:"Reactjs",
+            address:{
+                currentaddress:"bgl",
+                permanentaddress:"mpl"
+            }
+        };
+        console.log(data);
+        console.log(data.name);
+        console.log(data.age);
+        console.log(data.gender);
+        console.log(data.course);
+        console.log(data.address.currentaddress);
+        console.log(data.address.permanentaddress);
+
+        for(a in data){
+            console.log(data[a]);
+        }
+        for(b in data.address){
+            console.log(data.address[b]);
+        }
+
+        data.intrest="travel";
+        console.log(data);
+        delete data.course;
+        console.log(data);
+        console.log(Object.keys(data));
+        console.log(Object.values(data));
+        console.log(data.hasOwnProperty("name"));
+    </script>
+</body>
+</html>
