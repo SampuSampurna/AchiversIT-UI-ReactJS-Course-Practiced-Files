@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <!--  
+    functions - these are reusable block of code we can use same block of code many times and whenever u want you can use that block of code withing function by calling the function
+    mainly two types:
+    1. pre-defined functions - js developers are already created some methods/functions ex:at(), chatAt(), toUpperCase()
+    2. user defined functions - for our convience we can create some functions to do some operations/performance in our code to get proper output
+    syntax:
+    Function declaration:
+
+     function nameOfFunction() {
+     //block of code
+     }
+
+     Function Calling:
+     nameOfFunction();
+
+     User Defined functions are classified into 12 types
+     1. function without parameters 
+     2. function with parameters
+     3. function with return type - if we use return type of function then if u want to print output that should be stored in one variable
+     4. function with default parameters
+     5. named function
+     6. variable function
+     7. anonymous functions - without any names for that we can use settimeout
+     8. callback function - calling one funstion within the other function by using function calling syntax
+     9. nested function - function within the fuxntion inner function can be access within the function only 
+     10. recursive function  - calling by itself
+     11. IIFE (Immediatly Invocked Function Expression) - by using (//block of code)();
+     12. Arrow function - easy in syntax and very useful in advanced js
+     
+    
+    -->
+    <script>
+        //without any parameters
+        function greet() {
+            console.log("Hello Guys");
+        }
+        greet();
+
+        //with parameters
+        function greet2(name) {
+            console.log("Hello " + name);
+        }
+        greet2("Sampu");
+        greet2("sree");
+        greet2("nandu")
+
+        //with return
+        function add(a,b){
+            return a+b;
+        }
+        let c=add(2,4);
+        console.log(c);
+
+        //default arguments
+        function greet3(name="Sampu"){
+            console.log("Hello " + name);
+        }
+        greet3();
+
+        //named function
+        function namedfunction(){
+            console.log("named function");
+        }
+
+        //variable function
+        let x=function(){
+            console.log("variable function");
+        }
+        x();
+
+
+        //anonymous function means without any function name
+        setTimeout(function() {
+            console.log("hlo");
+        }, 1000);
+
+        //callback function
+        function greet4(){
+               console.log("callback");
+               greet5();
+        }
+        function greet5(){
+            console.log("callback2");
+        }
+        greet4();
+
+        //nested function
+        function greet6(){
+            console.log("1.nested function");
+            function greet7(){
+                console.log("nested function");
+            }
+            console.log("2.nested fucntion");
+            greet7();
+        }
+        greet6();
+
+        //recursive function
+        function greet8(n){
+            if(n==0){
+                return;
+            }
+            console.log(n);
+            greet8(n-1);
+        }
+        greet8(5);
+
+        //IIFE (Immediatly Invocked Function Expression)
+        (function greet9(){
+            console.log("IIFE");
+            })();
+
+       //Arrow functions
+       let greet10=()=>{
+        console.log("arrow function");
+        }
+        greet10();
+
+
+
+        
+
+   
+    
+
+
+
+
+    </script>
+</body>
+</html>
