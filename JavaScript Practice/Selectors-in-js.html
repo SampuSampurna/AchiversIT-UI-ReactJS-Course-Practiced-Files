@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors-in-css</title>
+    <style>
+        .classnamestyling{
+            padding: 10px;
+            border: 2px dotted darkcyan;
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    Selector:
+    1.getElementsByTagName()
+    2.getElementsByClassName()
+    3.getElementById()
+    4.querySelector() - if we didnt give any index value then it takes only first value
+    5.querySelectorAll()
+
+    1.css selectors vs js selectors
+      css selectors ar eused to style the html elements but by using the js selectors we can dynamically change and override
+
+    2.getelementsby classname and tagname vs getelement by id
+      getelementsbyclassname and get elementsbytagname we can select multiple elements but by using getelementbyid we can slect only one element at a time
+    -->
+
+    <div>html</div>
+    <div>html</div>
+    <section>html</section>
+    <section>html</section>
+    <section>html</section>
+    <section>html</section>
+    <h2>html</h2>
+    <h2 class="classnamestyling">html</h2>
+    <h2 class="classnamestyling">html</h2>
+    <h3 id="idnamestyling">html<h3>
+    <h4>html</h4>
+    <h4>html</h4>
+    <p>html</p>
+    <p>html</p>
+    <p>html</p>
+
+    <script>
+
+        //tag name
+        document.getElementsByTagName('div')[0].style.color="red";  //to select only one div tag we can use index values
+        document.getElementsByTagName('div')[1].style.color="blue";
+        //we can use for loop also for same style multiple elements
+        for (let i = 0; i < document.getElementsByTagName('section').length; i++)
+        {
+        document.getElementsByTagName('section')[i].style.color="green";            
+        }
+        //we can use like this also 
+        let h2styling=document.getElementsByTagName("h2");
+        h2styling[0].style.color="darkgreen";      //and also we can also use loops also
+
+        //class name
+        document.getElementsByClassName("classnamestyling");   
+        document.getElementsByClassName("classnamestyling")[0].style.color="green";  //we ca specify like this also without index values we get error only 
+
+        //id name
+        document.getElementById("idnamestyling").style.backgroundColor="blue";  //we dont want to select any index value because it select only unique value only
+        
+        //querySelector
+        document.querySelector("h4").style.backgroundColor='green'; //it applies only first element only
+        document.querySelectorAll("p")[0].style.backgroundColor="red"; //for this method we should use index values also otherwise it gives error when if u are using console.log()
+        
+
+
+    </script>
+</body>
+</html>
