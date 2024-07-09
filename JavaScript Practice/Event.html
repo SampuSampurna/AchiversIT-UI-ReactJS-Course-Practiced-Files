@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js</title>
+    <style>
+        #hidden-content{
+            display: none;
+            border: 5px double lightcoral;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Events: it is special situation when that situation is occur then some task will takes place
+    two types of events
+    1.Mouse Events    
+        1.click
+        2.dblclick
+        3.mouseup
+        4.mousedown
+        5.mouseenter
+        6.mouseover
+        7.mouseout
+        8.mouseleave
+        9.contextmenu - if u click rightside button of mouse then it will excute the code within the function it used for if u click on the right side click in mouse then it will display some option like u can right click on the ur laptop then it will display some options
+
+
+        mouseover/mouseenter - works same
+        mouseout/mouseleave - works same
+
+    2.Keyboard Events
+
+        1.keydown - if u press key then only immediatly it will be excute function
+        2.keyup  - if u release the pressedkey then only function is excuted
+        3.keypress(deprecated) - some pc's are not supports ,it is combination of keyup and keydown
+
+    ~ -> tild operator
+    template Literals/String Interpolation: ` ` ->backtrips
+    it is used to display the output within single/multiple lines 
+    why it is used means before that we are single single and double quotes for string and + for concaination some people are confusing so that y we are using this method
+    syntax: `string   ${variable} string ${variable}  string ${variable}`
+    if u want variable then u should use ${variable} syntax only
+    
+    -->
+    <input type="button" id="click-btn" value="click" /> <br /><br />
+    <input type="button" id="dblclick-btn" value="dblclick" /> <br /><br />
+    <input type="button" id="mouse-btn" value="mouse" /> <br /><br />
+    <input type="button" id="context-menu" value="contextmenu" /> <br />
+    <h3 id="hidden-content">this is the hidden option</h3>
+
+    
+    <script>
+        //1.mouse events
+        //1.click
+        let singleclick=document.getElementById("click-btn");
+        singleclick.addEventListener("click",function(){
+            alert("you clicked the click button");      //anonymous function means function without name
+        });
+
+        //2.dblclick
+        document.getElementById("dblclick-btn").addEventListener("dblclick",function(){  //without taking varibale also we can do like these
+            alert("you double clicked the dblclick button");      
+        });
+
+        //3.mouseup
+        document.getElementById("mouse-btn").addEventListener("mouseover",function(){  
+            alert("mouse event");
+        });
+
+        //contextmenu
+        document.getElementById("context-menu").addEventListener("contextmenu",function(){
+            document.getElementById("hidden-content").style.display="block";
+            });
+
+        //2.key events 
+        //1.keydown
+        document.addEventListener("keyup",function(){  
+            alert(`you pressed the keyup ${event.key}`);  //it is used to which key u pressed
+        });
+        //2.keydown 
+        //document.addEventListener("keydown",function(){
+          //  alert("you pressed the keydown");
+        //})
+        //3.keypress
+        //document.addEventListener("keypress",function(){
+        //  alert("you pressed the keypress");
+        //})
+        //both/three events can't be shows at the same time onle one can be shown that y im commenting the one key event
+
+        //string interpolation/template literals
+        let name="sampu";
+        let name2=`sampurna 
+        sampu`;  //we can intilaize value in multiple lines with backtrips 
+        document.write(`my name is ${name} \n `);
+        document.write(name2);
+
+        
+        
+    </script>
+
+</body>
+</html>
