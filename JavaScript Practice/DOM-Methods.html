@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Methods</title>
+</head>
+<body>
+    <!--
+    DOM methods:
+    1.createElement - it is used to create html tags
+                      if u give other than html tags also then can take 
+    2.setAttribute  - it is used to pass avlues that are corresponds to the html tags already created
+    3.getAttribute  - it is used to get the values that are corresponds to the html tags
+    4.hasAttribute  - it is used to check whether the html tags has attribute or not
+    5.removeAttribute - it is used to remove the attribute from the html tags
+    6.appendChild - it is used to add the html tags to the parent html tags
+    7.insertBefore - it is used to add the html tags to the parent html tags
+    8.replaceChild - it is used to replace the html tags to the parent html tags
+    9.removeChild - it is used to remove the html tags from the parent html tags
+    10.cloneNode - it is used to clone the html tags
+    11.insertAdjacentElement - it is used to insert the html tags to the parent html tags
+    12.insertAdjacentHTML - it is used to insert the html tags to the parent html tags
+    13.insertAdjacentText - it is used to insert the html tags to the parent html tags
+
+
+
+    textContent - it is a property it is used to give some text 
+    createTextNode - it is also used to add some text 
+    -->
+    <div id="figure-container"></div>
+    <script>
+        const figureContainer = document.getElementById('figure-container');
+        console.log(figureContainer);
+        const figure = document.createElement('figure');
+        console.log(figure);
+        const image = document.createElement('img');
+        console.log(image);
+        image.setAttribute('src','https://i.pinimg.com/736x/5a/f0/6a/5af06a284a2469d99a5b531955139047.jpg');
+        image.setAttribute('alt','nature image');
+        image.setAttribute('width','200px');
+        image.setAttribute('height','200px');
+        figureContainer.appendChild(figure);
+        figure.appendChild(image);
+        const text=document.createElement('h2');
+        text.textContent='Nature is beautiful';
+        figure.appendChild(text);
+
+        
+
+    </script>
+</body>
+</html>
