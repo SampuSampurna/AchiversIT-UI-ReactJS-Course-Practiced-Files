@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubling-and-Event-Capturing</title>
+    <style>
+        div,section{
+            border:1px solid orange;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Event Flow - the event will occurs in flow only either top-bottom/bottom-top
+    Event BUbbling: (ChildToParent/ButtonToTop)
+    In this take example of take glass of water/cooldrink in this the water bubble are from bottom to top
+    coming to subject in this also there are so many section like nested sections/div in that sections also coming from last to fast/child to parent
+    
+    Event Capturing: (ParentToChild/ButtonToBottom)
+    take example of photo capturing , 4 members are taking self then only first person face is clearly and remaining all are less quality
+    like that top to bottom/parent to child only
+
+    note - go with only any one in event bubbling or event capturing but recommened one is event bubbling
+           event bubbling vs event capturing
+           use stopPropogation to stop occuring the other elements in both
+    1.bubbling-child to parent  capturing-parent to child
+    2.bubbling -  in addEventListner we didnt anything specify as third parameter by default it has only false
+      capturing - we pass true as a third parameter
+
+    
+
+
+    -->
+<h2>Event Bubbling</h2>
+    <div id="grand">       <!--nested divs-->
+        Im grand
+        <div id="parent">
+            Im parent
+            <div id="child">
+                Im child
+            </div>
+        </div>
+    </div>
+<h2>Event Capturing</h2>
+    <section id="grand2">
+        Im grand
+        <section id="parent2">
+            Im parent
+            <section id="child2">
+                Im child
+            </section>
+        </section>
+    </section>
+
+    <script>
+        //event bubbling
+        document.getElementById('grand').addEventListener('click',function(){
+            e.stopPropagation();    //this is optinal because of there is no parent element for this element
+            alert("Grand");        //if u click on the grand ,grand only display
+        });
+        document.getElementById('parent').addEventListener('click',function(){
+            e.stopPropagation();
+            alert("parent");          //if u click on the parent, first parent and then grand will display
+        });
+        document.getElementById('child').addEventListener('click',function(e){
+            e.stopPropagation(); //this method is used to control that only child will display ,parent and grand will not display
+            alert("child");       //if u click on the child then first child,parent,grand will display 
+        });
+        //Here the problem is if u click on the child then parent and grand also isplaying but u dont want , wt u want is only if u click on the child then the child is only display 
+        //to stop that we are using the method as 
+
+
+        //event capturing
+        //if u pass true as argument in the addEventLister then only it works as capturing otherwise it works as bubbling
+        document.getElementById("grand2").addEventListener('click',function(){
+            alert("grand");
+        },true); //if we keep true then if display in reverse order like grand,parent,child 
+        //addEventListener had three pareamters, 1.eventlistern,2.function,3.boolean  (by default it having false vale)
+        //if we didnt specify anything then the it works as capturing only
+        document.getElementById("parent2").addEventListener('click',function(){
+            alert("parent");
+        },true);
+        document.getElementById("child2").addEventListener('click',function(){
+            alert("child");
+        },true);
+
+    </script>
+    
+</body>
+</html>
