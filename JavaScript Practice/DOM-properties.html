@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-peroperties</title>
+</head>
+<body>
+    <!-- 
+    DOM - Document Object Model
+    it is like tree structure and main root tag is html and inside html there are two tags are head,body
+
+    DOM properties:
+    these three are used to write the content dynamically using script and we can also change/modify the exsting content also 
+    1.innerText  - display visible text only
+    2.innerHTML  - display visible text and along with the html elements also includes tags also
+    3.textContent - displays visible and invible text also
+
+    innerText vs innerHTML vs textcontent
+    in innerText if u give the any content within the tags also it takes that tags are also as a strings
+    in innerHTML it takes as tags and converts only display content within the tags only mean it also accepts the htl cocntent 
+    in textContent it takes all the content visible and invisible also means it dont care about the styling and other properties it takes care about only the conent which is inside the tags only
+    -->
+    <h2 id="innertext">Hello guys <i>how are you</i></h2>
+    <h2 id="innerhtml">Hello guys <i>how are you</i></h2>
+    <h2 id="textcontent">Hello guys <i style="display: none;">how are you</i></h2>
+</body>
+<script>
+    // 1. innerText
+    console.log(document.getElementById('innertext'));   //it display the entire line h2 tags
+    console.log(document.getElementById('innertext').innerText); //it displays only content which is inside the h2
+    console.log(document.getElementById('innertext').innerText = "innertext"); 
+    console.log(document.getElementById('innertext').innerText = "<p>heyy<p>"); 
+
+    //2.innerHTML
+    console.log(document.getElementById('innerhtml')); 
+    console.log(document.getElementById('innerhtml').innerHTML="<p>heyy<p>"); //it displays the entire line h2 tags
+
+    //3.textContent
+    console.log(document.getElementById('textcontent')); 
+    console.log(document.getElementById('textcontent').textContent); //it displays the invisible conent also 
+</script>
+</html>
