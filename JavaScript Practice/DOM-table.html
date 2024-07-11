@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table using DOM</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+            </style>
+</head>
+<body>
+    <section id="table-container"></section>
+    <script>
+
+        //here are we are creating the table using only javascript 
+        //we can also create the table using html using less code in simple way 
+        //why we are using means to know we can create the table using js also and also by using not only html we can also create js
+        //dynamically we can change the values within the table
+
+        //table creation
+        const tablecontainer=document.getElementById("table-container");
+        const table = document.createElement('table');  //to create table tag 
+        tablecontainer.appendChild(table);              //it will append to section which is available in the html using id
+        const tablehead=document.createElement('thead');
+        table.appendChild(tablehead);
+        const tablebody=document.createElement('tbody'); 
+        table.appendChild(tablebody);
+        
+        //table head
+        const tableheadrow=document.createElement('tr');
+        tablehead.appendChild(tableheadrow);
+        const tableheadcell1=document.createElement('th');
+        tableheadcell1.textContent="Name";    //to add text 
+        tableheadrow.appendChild(tableheadcell1);
+        const tableheadcell2=document.createElement('th');
+        tableheadcell2.textContent="Age";
+        tableheadrow.appendChild(tableheadcell2);
+        const tableheadcell3=document.createElement('th');
+        tableheadcell3.textContent="Gender";
+        tableheadrow.appendChild(tableheadcell3);
+
+        //row1
+        const tablebodyrow1=document.createElement('tr');
+        tablebody.appendChild(tablebodyrow1);
+        const tablebodycell1=document.createElement('td');
+        tablebodycell1.textContent="Sampu";
+        tablebodyrow1.appendChild(tablebodycell1);
+        const tablebodycell2=document.createElement('td');
+        tablebodycell2.textContent="21";
+        tablebodyrow1.appendChild(tablebodycell2);
+        const tablebodycell3=document.createElement('td');
+        tablebodycell3.textContent="Female";
+        tablebodyrow1.appendChild(tablebodycell3);
+
+        //row2
+        const tablebodyrow2=document.createElement('tr');
+        tablebody.appendChild(tablebodyrow2);
+        const tablebodycell4=document.createElement('td');
+        tablebodycell4.textContent="Sreeja";
+        tablebodyrow2.appendChild(tablebodycell4);
+        const tablebodycell5=document.createElement('td');
+        tablebodycell5.textContent="20";
+        tablebodyrow2.appendChild(tablebodycell5);
+        const tablebodycell6=document.createElement('td');
+        tablebodycell6.textContent="Female";
+        tablebodyrow2.appendChild(tablebodycell6);
+
+        //row3
+        const tablebodyrow3=document.createElement('tr');
+        tablebody.appendChild(tablebodyrow3);
+        const tablebodycell7=document.createElement('td');
+        tablebodycell7.textContent="Sreenath";
+        tablebodyrow3.appendChild(tablebodycell7);
+        const tablebodycell8=document.createElement('td');
+        tablebodycell8.textContent="20";
+        tablebodyrow3.appendChild(tablebodycell8);
+        const tablebodycell9=document.createElement('td');
+        tablebodycell9.textContent="male";
+        tablebodyrow3.appendChild(tablebodycell9);
+
+        
+        
+
+    </script>
+</body>
+</html>
