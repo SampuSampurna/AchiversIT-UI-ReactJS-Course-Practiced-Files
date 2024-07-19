@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <!--
+    Error - Abnormal termination in code - means code is excuting line by line then once error is occur then that code will be terminated and stop excuting 
+    types of error:
+    1. type error
+    2. Syntax error
+    3. range error
+    4. reference error
+
+    in error handling mostly used terms are  
+    1.try      - block of code that u feel like there is some error in this block that block code should be placed in the try()
+    2.catch()    - wt ever the errors are occuring that can be handled and intentinally we can give some msgs related to error
+                   in this specially we have two 
+                   name and message means error name and why that error will be occur msg can be display 
+    3.finally() - this is optional if u want to excute block of code if error is there or not also this will be excute finally 
+    4.thrown    - in this we can pass an error or msg 
+
+    note:if there is try block of code then catch is mandetory and thrown and finally are optional
+    -->
+
+    <script>
+       function typeerror(){
+        try {
+                let a=10;
+                console.log(a());  //this is type error because a is not a function
+        }
+        catch(e){
+            console.log(e.name,e.message);
+        }
+        
+       }
+       typeerror();
+
+       function Syntaxerror(){
+        try {
+            eval("alert('Hello)");   // Missing ' will produce an error
+        }
+        catch(e){
+            console.log(e.name,e.message);
+        }
+       }
+       Syntaxerror();
+
+       function rangeerror(){
+        a=10;
+        try{
+            
+            console.log(a.toPrecision(500));
+        }
+        catch(e){
+            console.log(e.name,e.message);
+        }
+       }
+       rangeerror();
+
+       function referenceerror(){
+        try {
+            consolelog('hlo guys'+'');
+        }
+        catch(e){
+            console.log(e.name,e.message);
+        }
+       }
+       referenceerror();
+
+       
+
+       
+
+    </script>
+</body>
+</html>
