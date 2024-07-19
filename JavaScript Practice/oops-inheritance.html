@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Example</title>
+</head>
+<body>
+    <p id="s1details"></p>
+    <script>
+        class Student{
+            constructor(){
+                this.sid=510;
+                this.sname='sampu';
+            }
+        }
+        class Course extends Student{
+            constructor(course,fee){
+                super();
+                this.course=course;
+                this.fee=fee;
+            }
+            show(){
+                return `Id:${this.sid}, NameOfStudent: ${this.sname}, CourseName: ${this.course}, Fee:${this.fee}.`
+            }
+        }
+        const c1=new Course('ReactJs', 30000);
+        document.getElementById("s1details").innerHTML=c1.show();
+    </script>
+</body>
+</html>

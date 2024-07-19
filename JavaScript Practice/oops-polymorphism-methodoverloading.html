@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method-overloading</title>
+</head>
+<body>
+    <script>
+        class Parent{
+            mul(a,b){
+                document.write(a*b +"<br />")
+            }
+        }
+        class Child extends Parent{
+            mul(x,y,z){
+                document.write(x*y*z +"<br />");
+            }
+        }
+        const c=new Child();
+        c.mul(2,3,4);
+        c.mul(2,3); //we can't access parent mul() it gives output as NaN
+    </script>
+</body>
+</html>

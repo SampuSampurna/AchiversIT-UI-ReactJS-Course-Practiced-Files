@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+</head>
+<body>
+    <script>
+        function Details(){
+            this.name=name;
+        }
+        Details.prototype.show=function(){
+            document.write("Name:"+this.name);
+        }
+        function Name(){
+            this.name='Sampurna';
+        }
+        Name.prototype=Object.create(Details.prototype); //accessing Details() inside the Name() using Object.create
+        let n=new Name();
+        n.show();
+        
+    </script>
+</body>
+</html>

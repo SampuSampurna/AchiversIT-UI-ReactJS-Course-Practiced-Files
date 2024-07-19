@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>polymorphism-methodoverriding</title>
+</head>
+<body>
+    <script>
+        class Parent{
+            display(){
+                document.write('Im from parent <br />');
+            }
+        }
+        class Child extends Parent{
+            display(){
+                super.display();  //accesing parent methods inside child using super keyword
+                document.write('Im from child <br />');
+            }
+            show(){
+                document.write('Im also from child <br />')
+            }
+        }
+        const c1=new Child();
+        c1.display();
+        c1.show();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops</title>
+</head>
+<body>
+    <!--
+    oops - Object Oriented Programing system/Structure
+    in oops mainly terms we used adn we should know about 
+    1.class        - classes are the blueprints of objects 
+                    in real time if u want to construct building/house u must required plan/sketch like same here also class is the blue print 
+                    class has methods and properties
+    2.objects     - objects are instances of class 
+                     to create object new keyword is mandatory 
+                     new keyword is used to allocate a memory 
+                     object names is always in small letters only
+    3.Abstraction - hiding complex code and display only which ever the required only
+    4.encapsulation - combination of methods and properties 
+                      simple class having methods and properties is the best example of encapulation
+    5.inheritance   - acquiring / inheriting / accessing/ properties and methods from the parent to child
+    6.polymorphism  - poly means many and morphism means form , polmorphism means many form 
+                      
+                      1.methodoverriding - same method in parent and child class
+                      2.methodoverloading - same method with different parametes
+    constructor() - it is default method/function, it can be automatically excuted without calling
+    super - it is special keyword ,it is used to access the parent methods and properties inside the child class
+    -->
+    <script>
+        class Parent{
+                constructor(name,age){
+                    this.name=name;
+                    this.age=age;
+                }
+                display(){
+                    console.log("name is "+this.name+" and age is "+this.age);
+                    }
+        }
+        class Child extends Parent{
+            constructor(name,age,city){
+                super(name,age);
+                this.city=city;
+
+            }
+            show(){
+                console.log("city is "+this.city);
+            }
+        }
+        let c=new Child('sampu',20,'bgl');
+        c.display();
+        c.show();
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Example</title>
+</head>
+<body>
+    <p id="emp1"></p>
+    <p id="emp2"></p>
+    <p id="emp3"></p>
+    <p id="e1name"></p>
+    <p id="e2name"></p>
+    <p id="e3name"></p>
+    <script>
+        function Employee(empid, empname, empage){
+            this.empid=empid;
+            this.empname=empname;
+            this.empage=empage;
+        }
+        Employee.prototype.cmpyname='AchiversIT';
+        Employee.prototype.empsalary=50000;
+        Employee.prototype.workmode='WFO';
+        Employee.prototype.show=function(){
+            return `Id: ${this.empid} Name: ${this.empname} Age:${this.empage} CompanyName: ${this.cmpyname} Salary: ${this.empsalary} WorkMode: ${this.workmode}`
+        }
+        Employee.prototype.names=function(){
+            return `${this.empname}`
+        }
+        const e1=new Employee(510, 'Sampurna', 21);
+        const e2=new Employee(511, 'Sree', 20);
+        const e3=new Employee(513, 'Eshu', 23);
+        document.getElementById('emp1').innerHTML=e1.show();
+        document.getElementById('emp2').innerHTML=e2.show();
+        document.getElementById('emp3').innerHTML=e3.show();
+        document.getElementById('e1name').innerHTML=e1.names();
+        document.getElementById('e2name').innerHTML=e2.names();
+        document.getElementById('e3name').innerHTML=e3.names();
+    </script>
+</body>
+</html>
