@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructing</title>
+</head>
+<body>
+    <script>
+        const courses=['html', 'css', 'js', 'reactjs', 'nodejs', 'angularjs'];
+        const [a,b,c,d,e,f]=courses;  
+        document.write(a+' ' +b+' ' +c+' ' +d+' ' +e+' ' +f+'<br />');
+        const [first,,three,,,last]=courses;    //wt ever values you don't want give only comma only dont give any variable names 
+        document.write(first+' '+three+' '+last+'<br />')
+
+        const details = {
+            name: 'sampu',
+            age: 20,
+            course:'ReactJs',
+            address: 'bgl'
+        }
+        const {name,age,course,address}=details;  //no need to give specific order we can give any order
+        document.write('Name: '+name+'<br/>Age: ' +age+'<br />Course: '+course+'<br />Address: ' +address);
+        
+    </script>
+</body>
+</html>
