@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods-call-apply-bind</title>
+</head>
+<body>
+    <!-- accesing the methods inside the other object
+     three methods are used for accesing methods inside the other methods and only if key names in alll the properties of objects should be same and these three methods are takes parameter as object also
+     call() - takes  parametrs as normal format
+     apply() - takes parametrs inside the array only
+     bind() - takes parameters in normal format and also array also 
+     call() and apply() will give same output without passing any parametrs
+     call() and apply() vs bind()  both call() and apply() will excute the direct function and gives the output for the function but bind() will create new function and whenever u wan u can make use of that function y calling variable alng with paranthesis inside that paramerts if any parameters are there
+
+    -->
+    <script>
+        let student1={
+            id:510,
+            name:'Sampurna',
+            course:'ReactJs',
+            details:function(age,fee,duration){
+                return this.id+' '+this.name+' '+this.course+' '+age+' '+fee+' '+duration+'<br /> <br />'
+            }
+        }
+        let student2={
+            id:511,
+            name:'Rishitha',
+            course:'PythonFullStack'
+        }
+        let student3={
+            id:512,
+            name:'Payal Sharma',
+            course:'JavaFullStack'
+        }
+        let student4={
+            id:513,
+            name:'Kavya',
+            course:'SAAP'
+        }
+        document.write(student1.details());
+        document.write(student1.details.call(student2,21,35000,'6-months'));  //passing parameters as numbers,string format only
+        document.write(student1.details.apply(student3,[22,38000,'5-months'])); //passing parameters inside the array only
+        let bindExample=student1.details.bind(student4);  //it will create new function and we are storing that function in one variable and using that fucntion whenever that is requiered
+        document.write(bindExample(22,[35000],['7-months','8-months']));  //passing parameters as numbers, Strings, arrays also but seperated with comma only and no matter how many values u given in array that entire array is trreated as only one variable only
+
+    </script>
+</body>
+</html>

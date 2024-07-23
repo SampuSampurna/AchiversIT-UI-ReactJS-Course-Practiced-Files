@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-Application programming Interface</title>
+    <style>
+        #users-data {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px
+        } 
+        #individual-data {
+            border: 1px solid;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    API - Application Programming Interface
+    API - sending request from client to server and getting/accessing the data from server
+    two types of API
+    1. Web API - JSON (JavaScript Object Notation) - 
+    2. Third Party API - 1. weather API
+                         2. Maps API
+                         3. Facebook API
+                         4. Twitter API
+                         5. Financial API
+    
+    methods:
+    1. fetch() - we should pass any url within the single or double quotation as parameters
+    2. then() - we should pass functions like arrow Function to take the data and we can store data in any variable
+            . - it is special operator and names as member operator
+       json - javascript object notation and data is in form on array of objects
+    -->
+    <h2 style="text-align: center;">Users Details</h2>
+    <div id="users-data"></div>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users/')
+            .then(response => response.json())
+            .then(data => {
+                let usersIndividualData = '';
+                for (let i = 0; i < 10; i++) {
+                    usersIndividualData += `<div id='individual-data'>
+                    <p>ID: ${data[i].id}</p>
+                    <p>Name: ${data[i].name}</p>
+                    <p>UserName: ${data[i].username}</p>
+                    <p>Email: ${data[i].email}</p>
+                    <p>Phone: ${data[i].phone}</p>
+                    <p>Website: ${data[i].website}</p>
+                    <p>Address: ${data[i].address.city}</p>
+                    <p>CompanyName: ${data[i].company.name}</p>
+                    </div>
+                `}
+                document.getElementById('users-data').innerHTML = usersIndividualData;
+            });
+    </script>
+</body>
+</html>
