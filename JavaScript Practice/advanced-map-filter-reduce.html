@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map-filter-reduce-methods</title>
+</head>
+<body>
+    <script>
+        let presentAge=[20,21,22,23,24,25];
+        
+        //map method
+        let ageAfterTwoYears=presentAge.map(x=>x+2);
+        document.write(`present ages: ${presentAge} <br />`)
+        document.write(`ages after two years: ${ageAfterTwoYears} <br />`);
+
+        //filter method
+        let ageGreaterThan22=presentAge.filter(x=>x>22);
+        document.write(`ages greater than 22: ${ageGreaterThan22} <br />`);
+
+        //reduce method
+        let sumOfAge=presentAge.reduce((x,y)=>x+y);
+        document.write(`sum of all ages: ${sumOfAge}`);
+        
+    </script>
+</body>
+</html>

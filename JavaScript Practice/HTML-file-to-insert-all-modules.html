@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html-file-to-see-output</title>
+</head>
+<body>
+    <script type="module">
+        import {name,age,course,greetings} from './file1-export-modules.js';
+        import * as functionNames from './file2-export-modules.js';
+        console.log(name);
+        console.log(age);
+        console.log(course);
+        console.log(greetings());
+        console.log(functionNames.nameOnly());
+        console.log(functionNames.nameAndAge());
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storing api data using localstorage</title>
+    <style>
+        #containerUsersInformation{
+            border:1px solid ;
+            margin-right: 25%;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Album datails:</h2>
+    <div id="containerUsersInformation"></div>
+    <script>
+        let url='https://jsonplaceholder.typicode.com/photos/1';
+        let storedData=localStorage.getItem('infomation');
+        if(storedData){
+            display(JSON.parse(storedData));
+        }
+        else{
+            fetch(url).then(response=>response.json())
+            .then(data=>{
+                console.log(data);
+                localStorage.setItem('information',JSON.stringify(data));
+                display(data);
+            })
+        }
+        function display(data){
+            let usersInformation=`
+            <p>AlbumId: ${data.albumId}</p>
+            <p>Id: ${data.id}</p>
+            <p>AlbumTitle: ${data.title}</p>
+            <p>AlbumURL: ${data.url}</p>
+            <p>AlbumThumbnailURl: ${data.thumbnailUrl}</p>
+            `
+            document.getElementById('containerUsersInformation').innerHTML=usersInformation;
+        }
+    </script>
+</body>
+</html>

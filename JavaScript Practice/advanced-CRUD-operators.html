@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD(create, read, update, delete)-Operators</title>
+</head>
+
+<body>
+    <script>
+        arrayofobject1 = [                    
+            { id: 1, name: 'sampu', gender: 'f', age: 20, address: 'pgr' },
+            { id: 2, name: 'payal', gender: 'f', age: 21, address: 'hyn' },
+            { id: 3, name: 'rishitha', gender: 'f', age: 20, address: 'mpl' }
+        ];
+        console.log(arrayofobject1);
+        function readData(id) {
+            for (var i = 0; i < arrayofobject1.length; i++) {
+                if (arrayofobject1[i].id == id) {
+                    return arrayofobject1[i];
+                }
+            }
+        }
+        console.log(readData(2));
+        function updateData(id,newData){
+            for(var i=0;i<arrayofobject1.length;i++){
+                if(arrayofobject1[i].id==id){
+                    arrayofobject1[i]=newData;
+                }
+            }
+        }
+        updateData(3,{id:3, name:'sree', gender:'m', age:23, address:'bgl'});
+        console.log(arrayofobject1[2]);
+        console.log(arrayofobject1);
+        function deleteData(id){
+            for(var i=0;i<arrayofobject1.length;i++){
+                if(arrayofobject1[i].id==id){
+                    delete arrayofobject1[i];
+                }
+            }
+        }
+        deleteData(2);
+        console.log(arrayofobject1);
+    </script>
+</body>
+
+</html>

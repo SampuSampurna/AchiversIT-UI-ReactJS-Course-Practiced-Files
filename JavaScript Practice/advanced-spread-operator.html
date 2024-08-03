@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+        array1=[1,'sampu',null,true];
+        array2=array1;  //assigning one array to other array using assignment operator
+        console.log(array1);
+        console.log(array2);
+        console.log(typeof array1);
+        console.log(typeof array2);
+        console.log(array1 == array2); //it gives output true beacuese it takes same memory reference
+        console.log(array1 === array2);  // it also gives true because two arrays are same
+        array1.push(21);  //assigning new value to the array1 only
+        console.log(array1);   // new value is added
+        console.log(array2);   //for array2 also new value is added because array1 and array2 taking same memeory reference
+
+        array3=[2,'reethu',23,false];
+        array4=[...array3];  //assigning one array to other array using spread operator
+        console.log(array3);
+        console.log(array4);
+        console.log(typeof array3);
+        console.log(typeof array4);
+        console.log(array2 == array3);  //it gives output false because it takes different memory refernces
+        console.log(array2 === array3);  // if == is false then === is also false
+        array3.push('vnp');   //one more value is assigned to array3
+        console.log(array3);  //new values is added to array3
+        console.log(array4);  //new value is doesn't added because both array3 an array4 are taking different memeory refernces
+
+        array5=[...array1,...array3];  //combining two arrays using spread operator
+        console.log(array5);
+        console.log(typeof array5);
+
+        object1={name: 'sampu', age: 20, gender: 'f', addresss: 'pgr'};
+        object2=object1;  //assigning one object to other object assignment operator
+        console.log(object1);
+        console.log(object2);
+        console.log(typeof object1);
+        console.log(typeof object2);
+        console.log(object1 == object2);  //it gives output true beacuese it takes same memory reference
+        console.log(object1 === object2);  // it also gives true because two arrays are same
+
+        object3={name: 'nandu', age: 20, gender: 'f', addresss: 'pgr'};
+        object4={...object3};  //assigning one array to other array using spread operator
+        console.log(object3);
+        console.log(object4);
+        console.log(typeof object3);
+        console.log(typeof object4);
+        console.log(object3 == object4);   //it gives output false because it takes different memory refernces
+        console.log(object3 === object4);  // if == is false then === is also false 
+        object6={...object1, qualification:'btech'};  //we can add new values like this 
+        console.log(object6);  //only for object6 qualification value is added
+        console.log(object1);  //original object1 remains same because bothe object1 and object6 taking different memeory references
+
+        object5={...object1, ...object3};   //only object3 is stored because same id names are existed in object1 and object3
+        console.log(object5);   
+
+        
+    </script>
+</body>
+</html>

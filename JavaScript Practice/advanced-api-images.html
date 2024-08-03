@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>different-images-from-api</title>
+    <style>
+        h2{
+            text-align: center;
+            color: chocolate;
+            text-decoration: underline;
+        }
+        button{
+            display: block;
+    margin-left: 10%;
+    margin-bottom: 13px;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #EF5350;
+    color: white;
+        }
+        #mainContainerImages{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin: 0 10%;
+            gap: 26px;
+        }
+        img{
+            height: 200px;
+    width: 98%;
+    border: 4px double coral;
+    padding: 7px;
+    border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Dog's World</h2>
+    <button id="button-change-images">GetNewImages</button>
+    <section id="mainContainerImages">
+        <img class="individual-container-image">
+        <img class="individual-container-image">
+        <img class="individual-container-image">
+        <img class="individual-container-image">
+        <img class="individual-container-image">
+        <img class="individual-container-image">
+    </section>
+    <script>
+        let imageChangesButton=document.getElementById('button-change-images');
+        let imageContainer=document.getElementsByClassName('individual-container-image');
+        imageChangesButton.addEventListener('click',()=>{
+            for(let i=0;i<imageContainer.length;i++){
+                fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(imagesData=>{
+            imageContainer[i].src=imagesData.message;
+        }
+
+        )
+            }
+        })
+        
+    </script>
+</body>
+</html>

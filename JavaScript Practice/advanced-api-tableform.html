@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api-data-in-table-format</title>
+    <style>
+        table, tr, th, td{
+            border: 2px solid rgb(223 67 12 / 47%);;
+            border-collapse: collapse;
+            padding: 10px;
+            
+        }
+        th{
+            background-color: rgb(126, 30, 46);
+            font-size: 20px;
+        }
+        td{
+            background-color: rgb(231, 121, 139);
+
+        }
+        h2{
+            text-align: center;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <h2>Employee Details</h2>
+    <div id="tableDataContainer"></div>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(data => {
+                let tableData = `
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>CompanyName</th>
+                    <th>CompanycatchPhrase</th> 
+                </tr> `
+                data.forEach(individualRow => {
+                    tableData += `
+                <tr>
+                    <td>${individualRow.id}</td>
+                    <td>${individualRow.name}</td>
+                    <td>${individualRow.address.city}</td>
+                    <td>${individualRow.company.name}</td>
+                    <td>${individualRow.company.catchPhrase}</td>
+                </tr> `;
+                })
+                tableData += '</table>';
+                document.getElementById('tableDataContainer').innerHTML=tableData;
+            })
+    </script>
+</body>
+</html>

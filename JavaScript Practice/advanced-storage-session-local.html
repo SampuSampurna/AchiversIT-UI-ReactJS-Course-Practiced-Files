@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Techniques</title>
+</head>
+<body>
+    <!--
+    storage techniques:
+    1.cookies
+    2.local storage
+    3.session storage
+
+    local vs session:
+    the only difference is time duration in local storage data will be there upto we manuvally delete that data and 
+    in session storage the data will be deleted after closing the tab
+
+    objects:
+    1.localStorage
+    2.sessionStorage
+    
+    
+    methods:
+    1.setItem('key','value')
+    2.getItem('key')
+    3.removeItem('key')  - remove only one item
+    4.clear() - remove all the items
+    5. JSON.stringify(data) - convert object to string
+    6. JSON.parse(data) - convert string to object
+
+    properties:
+    length
+    -->
+    <script>
+        let data={ name:'Sampu', age:20, gender:'f', hobbies:['reading','swimming','dancing'] }
+        localStorage.setItem('user1',JSON.stringify(data));
+        let storedData=JSON.parse(localStorage.getItem('user1'));
+        document.write(`Name: ${storedData.name} <br />
+        Age:${storedData.age}  <br />
+        Gender:${storedData.gender}  <br />
+        Hobbies: ${storedData.hobbies}  <br /> `);
+        
+    </script>
+</body>
+</html>
